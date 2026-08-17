@@ -35,10 +35,12 @@ if (HAS_GSAP && !REDUCED) {
   setTimeout(revealSite, 600);
 }
 
+// Inicia cursor imediatamente
+initCursor();
+
 function initSite() {
   document.body.dataset.booted = '1';
   initLenis();
-  initCursor();
   initMagnetic();
   initReveals();
   initCounters();
@@ -82,46 +84,50 @@ function initLenis() {
   });
 }
 
-// ── CURSOR CUSTOMIZADO ────────────────────────────────────────
+// ── CURSOR FOLLOWER ───────────────────────────────────────────
 function initCursor() {
-  const cursor = document.querySelector('.cursor');
   const follower = document.querySelector('.cursor-follower');
-  if (!cursor || !follower) return;
+  if (!follower) return;
 
   if (!FINE_POINTER || REDUCED) {
-    cursor.style.display = 'none';
     follower.style.display = 'none';
     return;
   }
 
-  let mouseX = innerWidth / 2, mouseY = innerHeight / 2;
-  let followerX = mouseX, followerY = mouseY;
+  let mouseX = -100, mouseY = -100;
+  let followerX = -100, followerY = -100;
+  let isMoving = false;
 
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
+    if (!isMoving) {
+      isMoving = true;
+      followerX = mouseX;
+      followerY = mouseY;
+      follower.style.opacity = '1';
+    }
   }, { passive: true });
 
+  document.addEventListener('mouseleave', () => {
+    isMoving = false;
+    follower.style.opacity = '0';
+  });
+
   const loop = () => {
-    followerX += (mouseX - followerX) * 0.15;
-    followerY += (mouseY - followerY) * 0.15;
-    follower.style.left = followerX + 'px';
-    follower.style.top = followerY + 'px';
+    if (isMoving) {
+      followerX += (mouseX - followerX) * 0.18;
+      followerY += (mouseY - followerY) * 0.18;
+      follower.style.left = followerX + 'px';
+      follower.style.top = followerY + 'px';
+    }
     requestAnimationFrame(loop);
   };
   requestAnimationFrame(loop);
 
   document.querySelectorAll('a, button, summary, [data-magnetic]').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.classList.add('hover');
-      follower.classList.add('hover');
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.classList.remove('hover');
-      follower.classList.remove('hover');
-    });
+    el.addEventListener('mouseenter', () => follower.classList.add('hover'));
+    el.addEventListener('mouseleave', () => follower.classList.remove('hover'));
   });
 }
 

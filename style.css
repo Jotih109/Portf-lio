@@ -1712,31 +1712,15 @@ section {
 /* ============================================================
    NEW EFFECTS (CURSOR, PRELOADER, MAGNETIC)
    ============================================================ */
-/* Hide default cursor on desktop */
-@media (pointer: fine) {
-  body {
-    cursor: none;
-  }
-
-  a,
-  button,
-  [data-magnetic] {
-    cursor: none;
-  }
+/* Cursor follower effect */
+a,
+button,
+[data-magnetic] {
+  cursor: pointer;
 }
 
 .cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: width 0.2s, height 0.2s, background 0.2s;
+  display: none;
 }
 
 .cursor-follower {
@@ -1750,12 +1734,8 @@ section {
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s linear, width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
-}
-
-.cursor.hover {
-  width: 0;
-  height: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease, width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
 }
 
 .cursor-follower.hover {

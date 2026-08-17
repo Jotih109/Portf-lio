@@ -34,10 +34,12 @@ if (HAS_GSAP && !REDUCED) {
   setTimeout(revealSite, 500);
 }
 
+// Inicia cursor imediatamente para não travar na abertura da página
+initCursor();
+
 function initSite() {
   document.body.dataset.booted = '1';
   initLenis();
-  initCursor();
   initReveals();
   initCounters();
   initParallax();
@@ -46,6 +48,7 @@ function initSite() {
   initFilters();
   initCopyEmail();
   initYear();
+  initPrint();
 }
 
 // ── SCROLL SUAVE ──────────────────────────────────────────────
@@ -90,46 +93,50 @@ function initLenis() {
   });
 }
 
-// ── CURSOR ────────────────────────────────────────────────────
+// ── CURSOR FOLLOWER ───────────────────────────────────────────
 function initCursor() {
-  const cursor = document.querySelector('.cursor');
   const follower = document.querySelector('.cursor-follower');
-  if (!cursor || !follower) return;
+  if (!follower) return;
 
   if (!FINE_POINTER || REDUCED) {
-    cursor.style.display = 'none';
     follower.style.display = 'none';
     return;
   }
 
-  let mx = innerWidth / 2, my = innerHeight / 2;
-  let fx = mx, fy = my;
+  let mx = -100, my = -100;
+  let fx = -100, fy = -100;
+  let isMoving = false;
 
-  addEventListener('mousemove', (e) => {
+  window.addEventListener('mousemove', (e) => {
     mx = e.clientX;
     my = e.clientY;
-    cursor.style.left = mx + 'px';
-    cursor.style.top = my + 'px';
+    if (!isMoving) {
+      isMoving = true;
+      fx = mx;
+      fy = my;
+      follower.style.opacity = '1';
+    }
   }, { passive: true });
 
+  document.addEventListener('mouseleave', () => {
+    isMoving = false;
+    follower.style.opacity = '0';
+  });
+
   const loop = () => {
-    fx += (mx - fx) * 0.15;
-    fy += (my - fy) * 0.15;
-    follower.style.left = fx + 'px';
-    follower.style.top = fy + 'px';
+    if (isMoving) {
+      fx += (mx - fx) * 0.18;
+      fy += (my - fy) * 0.18;
+      follower.style.left = fx + 'px';
+      follower.style.top = fy + 'px';
+    }
     requestAnimationFrame(loop);
   };
   requestAnimationFrame(loop);
 
-  document.querySelectorAll('a, button, summary').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.classList.add('hover');
-      follower.classList.add('hover');
-    });
-    el.addEventListener('mouseleave', () => {
-      cursor.classList.remove('hover');
-      follower.classList.remove('hover');
-    });
+  document.querySelectorAll('a, button, summary, input, .filter-btn, .pc-links a').forEach(el => {
+    el.addEventListener('mouseenter', () => follower.classList.add('hover'));
+    el.addEventListener('mouseleave', () => follower.classList.remove('hover'));
   });
 }
 
@@ -350,4 +357,22 @@ function initCopyEmail() {
 function initYear() {
   const el = document.getElementById('year');
   if (el) el.textContent = new Date().getFullYear();
+}
+
+// ── IMPRIMIR / SALVAR EM PDF ──────────────────────────────────
+// A folha de estilo @media print entrega o currículo em preto no
+// branco; "Salvar como PDF" na caixa de impressão gera o arquivo.
+function initPrint() {
+  const triggers = document.querySelectorAll('#printBtn, #printLink, #printLink2');
+
+  triggers.forEach(el => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeMenu();
+      // Espera o menu fechar antes de abrir a caixa de impressão
+      setTimeout(() => print(), 220);
+    });
+  });
+
+  // Ctrl/Cmd + P usa a mesma folha de estilo, sem configuração extra
 }
