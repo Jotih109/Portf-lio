@@ -70,20 +70,19 @@
       <div class="menu-label">Navegação</div>
       <a class="menu-link" href="#hero">Início</a>
       <a class="menu-link" href="#projects">Projetos</a>
-      <a class="menu-link" href="#services">O que eu faço</a>
+      <a class="menu-link" href="#services">O que eu entrego</a>
       <a class="menu-link" href="#stack">Stack</a>
-      <a class="menu-link" href="#timeline">Trajetória</a>
       <a class="menu-link" href="#experience">Experiência</a>
       <a class="menu-link" href="#faq">Perguntas</a>
       <a class="menu-link accent" href="#contact">Contato</a>
     </div>
     <div class="menu-divider"></div>
-    <div class="menu-label">Onde me achar</div>
+    <div class="menu-label">Conectar</div>
     <div class="menu-social">
       <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
       <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="portfolio.html">Currículo Completo</a>
       <a href="mailto:joao.lamim@doqt.com.br">E-mail</a>
-      <a href="#" download>Currículo (PDF)</a>
     </div>
   </nav>
 
@@ -98,6 +97,7 @@
     <div class="nav-right">
       <div class="nav-inline">
         <a href="#projects" data-nav>Projetos</a>
+        <a href="#services" data-nav>Especialidades</a>
         <a href="#stack" data-nav>Stack</a>
         <a href="#experience" data-nav>Experiência</a>
       </div>
@@ -146,8 +146,8 @@
       <div class="hero-role reveal" style="transition-delay:.12s">Engenheiro de Software · Back-end &amp; Produto</div>
 
       <p class="hero-desc reveal" style="transition-delay:.18s">
-        Sou <b>João Lamim</b>. Trabalho no que fica embaixo do capô: <b>APIs</b>, modelagem de dados e integrações que
-        precisam funcionar às 3 da manhã sem ninguém acordar.
+        Sou <b>João Lamim</b>. Desenvolvo <b>APIs resilientes</b>, arquiteturas escaláveis e produtos web robustos
+        que operam com alta performance e tolerância a falhas.
       </p>
 
       <div class="hero-actions reveal" style="transition-delay:.24s">
@@ -163,7 +163,7 @@
 
       <div class="hero-meta reveal" style="transition-delay:.3s">
         <div class="hm-item"><b>6+</b><span>anos de código</span></div>
-        <div class="hm-item"><b>Node · Python</b><span>principais stacks</span></div>
+        <div class="hm-item"><b>Node · Python · TS</b><span>principais stacks</span></div>
         <div class="hm-item"><b>Remoto</b><span>Brasil · GMT-3</span></div>
       </div>
     </div>
@@ -178,12 +178,12 @@
     <div class="stat-cell">
       <div class="stat-val" data-count="6">0</div>
       <div class="stat-lbl">Anos de experiência</div>
-      <div class="stat-sub">desde 2019</div>
+      <div class="stat-sub">construindo produtos</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val" data-count="30">0</div>
       <div class="stat-lbl">Projetos entregues</div>
-      <div class="stat-sub">produto, interno e freela</div>
+      <div class="stat-sub">produção e clientes</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val" data-count="12">0</div>
@@ -193,7 +193,7 @@
     <div class="stat-cell">
       <div class="stat-val" data-count="99">0<sup>%</sup></div>
       <div class="stat-lbl">Uptime médio</div>
-      <div class="stat-sub">serviços que mantenho</div>
+      <div class="stat-sub">alta disponibilidade</div>
     </div>
   </section>
 
@@ -205,7 +205,7 @@
     <blockquote class="quote-text reveal" style="transition-delay:.08s">
       Código <b>chato</b> é código que dorme à noite.
     </blockquote>
-    <p class="quote-sig reveal" style="transition-delay:.16s">Prefiro o óbvio que funciona ao esperto que quebra</p>
+    <p class="quote-sig reveal" style="transition-delay:.16s">Prefiro o simples e testado ao complexo que quebra</p>
   </section>
 
   <!-- ============================================================
@@ -214,7 +214,7 @@
   <section class="projects-section" id="projects">
     <div class="projects-head">
       <div>
-        <div class="section-label reveal">Seleção de trabalhos</div>
+        <div class="section-label reveal">Destaques</div>
         <h2 class="section-title reveal" style="transition-delay:.08s">PROJETOS<br>EM <em>produção</em></h2>
       </div>
       <div class="projects-filters reveal" style="transition-delay:.16s" role="group" aria-label="Filtrar projetos">
@@ -227,7 +227,7 @@
 
     <div class="projects-grid">
 
-      <!-- Projeto 1 — destaque -->
+      <!-- Projeto 1 — Back-end Gateway -->
       <article class="project-card wide" data-cat="backend">
         <div class="pc-visual" aria-hidden="true">
           <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
@@ -252,20 +252,19 @@
         <div class="pc-body">
           <div class="pc-type">Plataforma · Back-end</div>
           <h3 class="pc-title">Gateway de Integrações</h3>
-          <p class="pc-desc">Camada única que normaliza dezenas de integrações externas por trás de uma API estável,
-            com retry, fila e observabilidade de ponta a ponta.</p>
+          <p class="pc-desc">Camada unificada que normaliza dezenas de provedores externos com retry inteligente, rate limiting e observabilidade contínua.</p>
           <span class="pc-metric">p95 de 1,2s → 180ms</span>
           <div class="pc-stack">
             <span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span>
           </div>
           <div class="pc-links">
-            <a href="#">Estudo de caso</a>
-            <a href="#" target="_blank" rel="noopener">Repositório</a>
+            <a href="#contact">Discutir arquitetura</a>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
-      <!-- Projeto 2 — destaque -->
+      <!-- Projeto 2 — Dashboard Real-time -->
       <article class="project-card tall" data-cat="frontend">
         <div class="pc-visual" aria-hidden="true">
           <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
@@ -292,20 +291,19 @@
         <div class="pc-body">
           <div class="pc-type">Dashboard · Front-end</div>
           <h3 class="pc-title">Painel de Métricas em Tempo Real</h3>
-          <p class="pc-desc">Interface de operação com streaming de dados, filtros salvos e gráficos que continuam
-            legíveis com milhares de pontos na tela.</p>
+          <p class="pc-desc">Interface analítica de alta performance com streaming de dados via WebSocket e renderização instantânea de grandes volumes.</p>
           <span class="pc-metric">Lighthouse 98 · LCP 1,1s</span>
           <div class="pc-stack">
             <span>React</span><span>TypeScript</span><span>WebSocket</span><span>Vite</span>
           </div>
           <div class="pc-links">
-            <a href="#">Estudo de caso</a>
-            <a href="#" target="_blank" rel="noopener">Demo</a>
+            <a href="#contact">Ver detalhes</a>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </article>
 
-      <!-- Projeto 3 -->
+      <!-- Projeto 3 — Infra CI/CD -->
       <article class="project-card" data-cat="infra">
         <div class="pc-visual" aria-hidden="true">
           <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
@@ -320,16 +318,16 @@
         </div>
         <span class="pc-index">03</span>
         <div class="pc-body">
-          <div class="pc-type">Infra · CI/CD</div>
-          <h3 class="pc-title">Pipeline de Deploy</h3>
-          <p class="pc-desc">Do push ao produção em minutos, com testes, build em container e rollback automático.</p>
-          <span class="pc-metric">deploy: 40min → 6min</span>
+          <div class="pc-type">Infra · DevOps</div>
+          <h3 class="pc-title">Pipeline de Deploy Automatizado</h3>
+          <p class="pc-desc">Automação de ponta a ponta: build em containers, validação de testes automatizados e deploy sem downtime com rollback.</p>
+          <span class="pc-metric">Deploy: 40min → 6min</span>
           <div class="pc-stack"><span>GitHub Actions</span><span>Docker</span><span>AWS</span></div>
-          <div class="pc-links"><a href="#">Detalhes</a></div>
+          <div class="pc-links"><a href="#contact">Detalhes</a></div>
         </div>
       </article>
 
-      <!-- Projeto 4 -->
+      <!-- Projeto 4 — Dados / ETL -->
       <article class="project-card" data-cat="backend">
         <div class="pc-visual" aria-hidden="true">
           <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
@@ -343,60 +341,12 @@
         </div>
         <span class="pc-index">04</span>
         <div class="pc-body">
-          <div class="pc-type">Dados · ETL</div>
-          <h3 class="pc-title">Pipeline de Ingestão</h3>
-          <p class="pc-desc">Coleta, valida e carrega milhões de registros por dia, com reprocessamento idempotente.</p>
-          <span class="pc-metric">2M+ registros/dia</span>
-          <div class="pc-stack"><span>Python</span><span>Airflow</span><span>PostgreSQL</span></div>
-          <div class="pc-links"><a href="#">Detalhes</a></div>
-        </div>
-      </article>
-
-      <!-- Projeto 5 -->
-      <article class="project-card" data-cat="frontend">
-        <div class="pc-visual" aria-hidden="true">
-          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
-            <rect width="400" height="400" fill="#0D0D10" />
-            <g fill="none" stroke="rgba(255,176,32,.3)" stroke-width="1.3">
-              <rect x="70" y="90" width="260" height="220" rx="8" />
-              <path d="M70 140 L330 140" />
-              <circle cx="95" cy="115" r="5" />
-              <circle cx="115" cy="115" r="5" />
-              <circle cx="135" cy="115" r="5" />
-              <path d="M100 180 L230 180 M100 215 L280 215 M100 250 L190 250" />
-            </g>
-          </svg>
-        </div>
-        <span class="pc-index">05</span>
-        <div class="pc-body">
-          <div class="pc-type">Open source</div>
-          <h3 class="pc-title">Biblioteca de Componentes</h3>
-          <p class="pc-desc">Design system acessível, com tokens, tema claro/escuro e documentação viva.</p>
-          <span class="pc-metric">100% WCAG AA</span>
-          <div class="pc-stack"><span>TypeScript</span><span>Storybook</span><span>CSS</span></div>
-          <div class="pc-links"><a href="#" target="_blank" rel="noopener">GitHub</a></div>
-        </div>
-      </article>
-
-      <!-- Projeto 6 -->
-      <article class="project-card" data-cat="infra">
-        <div class="pc-visual" aria-hidden="true">
-          <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
-            <rect width="400" height="400" fill="#0F0E12" />
-            <g stroke="rgba(255,176,32,.3)" fill="none" stroke-width="1.3">
-              <path d="M200 70 L310 130 L310 260 L200 320 L90 260 L90 130 Z" />
-              <path d="M200 130 L255 160 L255 225 L200 255 L145 225 L145 160 Z" />
-            </g>
-          </svg>
-        </div>
-        <span class="pc-index">06</span>
-        <div class="pc-body">
-          <div class="pc-type">Observabilidade</div>
-          <h3 class="pc-title">Stack de Monitoramento</h3>
-          <p class="pc-desc">Logs, métricas e alertas centralizados — o incidente aparece antes do cliente ligar.</p>
-          <span class="pc-metric">MTTR reduzido em 60%</span>
-          <div class="pc-stack"><span>Grafana</span><span>Prometheus</span><span>OpenTelemetry</span></div>
-          <div class="pc-links"><a href="#">Detalhes</a></div>
+          <div class="pc-type">Dados · Pipeline</div>
+          <h3 class="pc-title">Pipeline de Ingestão de Dados</h3>
+          <p class="pc-desc">Processamento e transformação resiliente de grandes cargas de dados diárias com reprocessamento idempotente.</p>
+          <span class="pc-metric">2M+ registros / dia</span>
+          <div class="pc-stack"><span>Python</span><span>PostgreSQL</span><span>Redis</span></div>
+          <div class="pc-links"><a href="#contact">Detalhes</a></div>
         </div>
       </article>
 
@@ -404,7 +354,7 @@
   </section>
 
   <!-- ============================================================
-     O QUE EU FAÇO
+     O QUE EU ENTREGO
      ============================================================ -->
   <section class="split-hub" id="services">
     <svg class="split-hub-bg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" fill="none"
@@ -415,33 +365,31 @@
         stroke="rgba(255,176,32,0.07)" stroke-width="0.8" />
     </svg>
 
-    <div class="section-label reveal">Serviços</div>
+    <div class="section-label reveal">Especialidades</div>
     <h2 class="section-title reveal" style="transition-delay:.08s">O QUE EU<br><em>entrego</em></h2>
 
     <div class="split-hub-inner">
       <div class="split-card reveal">
         <span class="hub-t1">BACK-END</span>
-        <span class="hub-t2">e arquitetura</span>
-        <p class="hub-desc">Desenho e implemento a espinha dorsal do produto: APIs bem versionadas, modelagem de dados
-          que não vira dívida e integrações que falham de forma previsível.</p>
+        <span class="hub-t2">e arquitetura sólida</span>
+        <p class="hub-desc">Construção de APIs escaláveis, modelagem de banco de alto desempenho e mensageria para sistemas que exigem disponibilidade.</p>
         <ul class="hub-list">
-          <li>APIs REST e GraphQL documentadas</li>
-          <li>Modelagem e otimização de banco</li>
-          <li>Filas, jobs e processamento assíncrono</li>
-          <li>Autenticação, permissões e auditoria</li>
+          <li>APIs REST e GraphQL padronizadas e rápidas</li>
+          <li>Modelagem e otimização de PostgreSQL</li>
+          <li>Filas, jobs em background e processamento assíncrono</li>
+          <li>Autenticação, segurança e auditoria</li>
         </ul>
       </div>
 
       <div class="split-card reveal" style="transition-delay:.1s">
         <span class="hub-t1">PRODUTO</span>
-        <span class="hub-t2">de ponta a ponta</span>
-        <p class="hub-desc">Quando o projeto pede, levo do Figma ao deploy: interface, infraestrutura e o que estiver
-          entre os dois — sem terceirizar a parte difícil.</p>
+        <span class="hub-t2">do design ao deploy</span>
+        <p class="hub-desc">Entrega completa de soluções web integradas, conectando interfaces reativas à infraestrutura em nuvem.</p>
         <ul class="hub-list">
-          <li>Interfaces em React com foco em performance</li>
-          <li>CI/CD, containers e deploy automatizado</li>
-          <li>Observabilidade e resposta a incidentes</li>
-          <li>Code review e mentoria técnica</li>
+          <li>Aplicações React com foco em UX e velocidade</li>
+          <li>Infraestrutura automatizada com Docker e AWS</li>
+          <li>Pipelines de CI/CD rápidos e confiáveis</li>
+          <li>Monitoramento e observabilidade em produção</li>
         </ul>
       </div>
     </div>
@@ -452,7 +400,7 @@
      ============================================================ -->
   <section class="stack-section" id="stack">
     <div class="section-label reveal">Ferramentas do dia a dia</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">STACK<br><em>atual</em></h2>
+    <h2 class="section-title reveal" style="transition-delay:.08s">STACK<br><em>principal</em></h2>
 
     <div class="stack-grid stagger">
       <div class="stack-col">
@@ -462,7 +410,6 @@
           <li>JavaScript <i>Diário</i></li>
           <li>Python <i>Frequente</i></li>
           <li>SQL <i>Diário</i></li>
-          <li>Go <i>Estudando</i></li>
         </ul>
       </div>
       <div class="stack-col">
@@ -471,8 +418,7 @@
           <li>Node.js <i>Diário</i></li>
           <li>NestJS <i>Frequente</i></li>
           <li>FastAPI <i>Frequente</i></li>
-          <li>PostgreSQL <i>Diário</i></li>
-          <li>Redis <i>Frequente</i></li>
+          <li>PostgreSQL / Redis <i>Diário</i></li>
         </ul>
       </div>
       <div class="stack-col">
@@ -481,75 +427,17 @@
           <li>React <i>Frequente</i></li>
           <li>Next.js <i>Frequente</i></li>
           <li>Vite <i>Frequente</i></li>
-          <li>CSS moderno <i>Diário</i></li>
-          <li>Testing Library <i>Frequente</i></li>
+          <li>CSS Moderno <i>Diário</i></li>
         </ul>
       </div>
       <div class="stack-col">
-        <h3>Infra &amp; Dados</h3>
+        <h3>Infra &amp; Cloud</h3>
         <ul>
           <li>Docker <i>Diário</i></li>
           <li>AWS <i>Frequente</i></li>
           <li>GitHub Actions <i>Diário</i></li>
-          <li>Terraform <i>Ocasional</i></li>
-          <li>Grafana <i>Frequente</i></li>
+          <li>Grafana / Logs <i>Frequente</i></li>
         </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-     TRAJETÓRIA
-     ============================================================ -->
-  <section class="timeline-section" id="timeline">
-    <div class="section-label reveal">Como cheguei aqui</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">TRAJETÓRIA</h2>
-
-    <div class="tl-grid">
-      <div class="tl-row">
-        <div class="tl-year-cell reveal">2017</div>
-        <div class="tl-content-cell reveal" style="transition-delay:.06s">
-          <div class="tl-event">Primeira linha de código</div>
-          <div class="tl-desc">Comecei automatizando planilhas e pequenas rotinas — o suficiente para descobrir que
-            resolver problema com código era mais interessante que a planilha em si.</div>
-        </div>
-      </div>
-
-      <div class="tl-row major">
-        <div class="tl-year-cell reveal">2019</div>
-        <div class="tl-content-cell reveal" style="transition-delay:.06s">
-          <div class="tl-event">Primeiro emprego como desenvolvedor</div>
-          <div class="tl-org">Estágio → Júnior</div>
-          <div class="tl-desc">Entrei mexendo em sistema legado, o melhor lugar possível para aprender por que boas
-            decisões de arquitetura importam.</div>
-        </div>
-      </div>
-
-      <div class="tl-row">
-        <div class="tl-year-cell reveal">2021</div>
-        <div class="tl-content-cell reveal" style="transition-delay:.06s">
-          <div class="tl-event">Foco em back-end e dados</div>
-          <div class="tl-desc">Assumi a camada de APIs e banco de um produto em crescimento e passei a lidar com
-            volume de verdade: índices, cache e filas deixaram de ser teoria.</div>
-        </div>
-      </div>
-
-      <div class="tl-row major">
-        <div class="tl-year-cell reveal">2023</div>
-        <div class="tl-content-cell reveal" style="transition-delay:.06s">
-          <div class="tl-event">Pleno com responsabilidade de arquitetura</div>
-          <div class="tl-desc">Comecei a desenhar sistema em vez de só implementar: definição de contratos, revisão de
-            código e as conversas difíceis sobre prazo versus dívida técnica.</div>
-        </div>
-      </div>
-
-      <div class="tl-row major">
-        <div class="tl-year-cell reveal">2025</div>
-        <div class="tl-content-cell reveal" style="transition-delay:.06s">
-          <div class="tl-event">Engenheiro de software sênior</div>
-          <div class="tl-desc">Hoje divido o tempo entre entregar produto, cuidar da saúde dos serviços em produção e
-            ajudar quem está começando a não repetir meus erros.</div>
-        </div>
       </div>
     </div>
   </section>
@@ -558,7 +446,7 @@
      EXPERIÊNCIA
      ============================================================ -->
   <section class="exp-section" id="experience">
-    <div class="section-label reveal">Currículo resumido</div>
+    <div class="section-label reveal">Trajetória</div>
     <h2 class="section-title reveal" style="transition-delay:.08s">EXPERIÊNCIA</h2>
 
     <div class="table-wrap reveal" style="transition-delay:.14s">
@@ -584,21 +472,21 @@
             <td>2022 — 2024</td>
             <td class="exp-role">Desenvolvedor Pleno</td>
             <td>Empresa Anterior</td>
-            <td>Produto web e performance</td>
+            <td>Produtos web e performance</td>
             <td class="exp-stack">React · Node · Redis</td>
           </tr>
           <tr>
             <td>2020 — 2022</td>
             <td class="exp-role">Desenvolvedor Júnior</td>
             <td>Primeira Empresa</td>
-            <td>Manutenção e modernização de legado</td>
+            <td>APIs e modernização de código</td>
             <td class="exp-stack">Python · SQL · Docker</td>
           </tr>
           <tr>
             <td>2019 — 2020</td>
-            <td class="exp-role">Estagiário de Desenvolvimento</td>
-            <td>Onde tudo começou</td>
-            <td>Automação e scripts internos</td>
+            <td class="exp-role">Estagiário de Software</td>
+            <td>Início da carreira</td>
+            <td>Automações e scripts internos</td>
             <td class="exp-stack">Python · Bash</td>
           </tr>
         </tbody>
@@ -607,11 +495,11 @@
   </section>
 
   <!-- ============================================================
-     COMO EU TRABALHO — toolbox
+     PRINCÍPIOS
      ============================================================ -->
   <section class="toolbox-section">
-    <div class="section-label reveal">Princípios</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">JEITO DE<br><em>trabalhar</em></h2>
+    <div class="section-label reveal">Diretrizes</div>
+    <h2 class="section-title reveal" style="transition-delay:.08s">COMO EU<br><em>penso código</em></h2>
 
     <div class="toolbox-grid stagger">
       <div class="tool-card">
@@ -621,17 +509,7 @@
           </svg>
         </div>
         <div class="tool-name">Simples primeiro</div>
-        <div class="tool-note">antes de otimizar</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M9 11l3 3L22 4" />
-            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
-          </svg>
-        </div>
-        <div class="tool-name">Testes onde dói</div>
-        <div class="tool-note">cobertura com critério</div>
+        <div class="tool-note">evitar complexidade precoce</div>
       </div>
       <div class="tool-card">
         <div class="tool-icon">
@@ -639,18 +517,8 @@
             <path d="M2 12h4l3 8 4-16 3 8h6" />
           </svg>
         </div>
-        <div class="tool-name">Medir antes</div>
-        <div class="tool-note">performance com número</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M4 19V5a2 2 0 012-2h12a2 2 0 012 2v14" />
-            <path d="M4 19h16M8 8h8M8 12h5" />
-          </svg>
-        </div>
-        <div class="tool-name">Documentar</div>
-        <div class="tool-note">o próximo dev agradece</div>
+        <div class="tool-name">Medir com dados</div>
+        <div class="tool-note">otimizar com números reais</div>
       </div>
       <div class="tool-card">
         <div class="tool-icon">
@@ -659,8 +527,8 @@
             <path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9" />
           </svg>
         </div>
-        <div class="tool-name">Automatizar</div>
-        <div class="tool-note">se repetiu 3x, vira script</div>
+        <div class="tool-name">Automação total</div>
+        <div class="tool-note">repetiu 3x, vira pipeline</div>
       </div>
       <div class="tool-card">
         <div class="tool-icon">
@@ -669,51 +537,9 @@
           </svg>
         </div>
         <div class="tool-name">Segurança por padrão</div>
-        <div class="tool-note">não é feature extra</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-          </svg>
-        </div>
-        <div class="tool-name">Time acima do ego</div>
-        <div class="tool-note">review é conversa</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path d="M16 18l6-6-6-6M8 6l-6 6 6 6" />
-          </svg>
-        </div>
-        <div class="tool-name">Aprender sempre</div>
-        <div class="tool-note">stack muda, base não</div>
+        <div class="tool-note">em cada camada da API</div>
       </div>
     </div>
-  </section>
-
-  <!-- ============================================================
-     CTA / CONTATO
-     ============================================================ -->
-  <section class="cta-section" id="contact">
-    <div class="cta-bg" aria-hidden="true"></div>
-    <p class="cta-sub reveal">Vamos conversar</p>
-    <h2 class="cta-headline reveal" style="transition-delay:.08s">
-      TEM UM <em>problema</em><br>TÉCNICO INTERESSANTE?
-    </h2>
-    <div class="cta-actions reveal" style="transition-delay:.16s">
-      <a class="btn-primary" href="mailto:joao.lamim@doqt.com.br">
-        joao.lamim@doqt.com.br
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          aria-hidden="true">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </a>
-      <button class="btn-ghost" type="button" id="copyEmail" data-email="joao.lamim@doqt.com.br">Copiar e-mail</button>
-    </div>
-    <span class="copy-toast" id="copyToast" role="status">E-mail copiado</span>
   </section>
 
   <!-- ============================================================
@@ -730,7 +556,6 @@
       <span class="marquee-item">Python</span>
       <span class="marquee-item">Redis</span>
       <span class="marquee-item">GraphQL</span>
-      <span class="marquee-item">Terraform</span>
       <!-- duplicata para loop contínuo -->
       <span class="marquee-item">TypeScript</span>
       <span class="marquee-item">Node.js</span>
@@ -741,7 +566,6 @@
       <span class="marquee-item">Python</span>
       <span class="marquee-item">Redis</span>
       <span class="marquee-item">GraphQL</span>
-      <span class="marquee-item">Terraform</span>
     </div>
   </div>
 
@@ -749,36 +573,45 @@
      FAQ
      ============================================================ -->
   <section class="faq-section" id="faq">
-    <div class="section-label reveal">Antes de me chamar</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">PERGUNTAS<br><em>frequentes</em></h2>
+    <div class="section-label reveal">Perguntas comuns</div>
+    <h2 class="section-title reveal" style="transition-delay:.08s">DÚVIDAS<br><em>rápidas</em></h2>
 
     <div class="faq-list stagger">
       <details class="faq-item">
         <summary>Você trabalha remoto?</summary>
-        <p>Sim, remoto em tempo integral, no fuso de Brasília (GMT-3). Tenho disponibilidade para reuniões com times
-          nos Estados Unidos e Europa dentro de uma janela combinada.</p>
+        <p>Sim, 100% remoto no fuso do Brasil (GMT-3), com facilidade de alinhamento com equipes internacionais.</p>
       </details>
       <details class="faq-item">
-        <summary>Aceita projetos pontuais ou só CLT?</summary>
-        <p>Ambos. Trabalho com contratos de projeto fechado, alocação por hora e posições fixas — o que fizer mais
-          sentido para o escopo.</p>
+        <summary>Aceita projetos pontuais ou só posições fixas?</summary>
+        <p>Ambos. Atuo em projetos fechados de consultoria/arquitetura e também em contratações de longo prazo.</p>
       </details>
       <details class="faq-item">
-        <summary>Qual seu tempo de resposta?</summary>
-        <p>Respondo e-mails em até 24 horas em dias úteis. Para uma conversa mais direta, mande já o contexto do
-          problema: assim a primeira resposta já vem com um caminho.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Você faz front-end também?</summary>
-        <p>Sim. Meu foco é back-end, mas entrego produto de ponta a ponta quando o projeto pede — inclusive interface,
-          com atenção real a performance e acessibilidade.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Pode mostrar código?</summary>
-        <p>Do que é aberto, sim: o GitHub tem projetos pessoais e contribuições. Código de cliente eu discuto em nível
-          de arquitetura e decisões, sem expor o que é confidencial.</p>
+        <summary>Qual o seu prazo típico de resposta?</summary>
+        <p>Respondo e-mails em até 24 horas úteis com direcionamento técnico e próximos passos claros.</p>
       </details>
     </div>
+  </section>
+
+  <!-- ============================================================
+     CTA / CONTATO
+     ============================================================ -->
+  <section class="cta-section" id="contact">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <p class="cta-sub reveal">Vamos conversar</p>
+    <h2 class="cta-headline reveal" style="transition-delay:.08s">
+      TEM UM <em>desafio</em><br>TÉCNICO INTERESSANTE?
+    </h2>
+    <div class="cta-actions reveal" style="transition-delay:.16s">
+      <a class="btn-primary" href="mailto:joao.lamim@doqt.com.br">
+        joao.lamim@doqt.com.br
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          aria-hidden="true">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+      <button class="btn-ghost" type="button" id="copyEmail" data-email="joao.lamim@doqt.com.br">Copiar e-mail</button>
+    </div>
+    <span class="copy-toast" id="copyToast" role="status">E-mail copiado</span>
   </section>
 
   <!-- ============================================================
@@ -792,26 +625,26 @@
         <div class="footer-col-title">Navegação</div>
         <a class="footer-link" href="#hero">Início</a>
         <a class="footer-link" href="#projects">Projetos</a>
+        <a class="footer-link" href="#services">Especialidades</a>
         <a class="footer-link" href="#stack">Stack</a>
         <a class="footer-link" href="#experience">Experiência</a>
         <a class="footer-link accent" href="#contact">Contato</a>
       </div>
       <div>
-        <div class="footer-col-title">Perfis</div>
+        <div class="footer-col-title">Conectar</div>
         <a class="footer-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
         <a class="footer-link" href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="footer-link" href="#" target="_blank" rel="noopener">Dev.to</a>
-        <a class="footer-link" href="#" download>Currículo (PDF)</a>
+        <a class="footer-link" href="portfolio.html">Currículo (Online/PDF)</a>
       </div>
       <div>
-        <div class="footer-col-title">Contato</div>
+        <div class="footer-col-title">Contato direto</div>
         <a class="footer-link" href="mailto:joao.lamim@doqt.com.br">joao.lamim@doqt.com.br</a>
         <a class="footer-link" href="#faq">Perguntas frequentes</a>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year">2026</span> João Lamim · Feito com HTML, CSS e café.</span>
+      <span>© <span id="year">2026</span> João Lamim · Engenheiro de Software.</span>
       <a href="#hero">Voltar ao topo ↑</a>
     </div>
   </footer>
