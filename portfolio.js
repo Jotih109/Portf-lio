@@ -40,6 +40,8 @@ initCursor();
 function initSite() {
   document.body.dataset.booted = '1';
   initLenis();
+  initMagnetic();
+  initCardSpotlights();
   initReveals();
   initCounters();
   initParallax();
@@ -93,14 +95,22 @@ function initLenis() {
   });
 }
 
-// ── CURSOR FOLLOWER ───────────────────────────────────────────
+// ── CURSOR INTERATIVO (DOT + FOLLOWER + RIPPLE) ────────────────
 function initCursor() {
-  const follower = document.querySelector('.cursor-follower');
-  if (!follower) return;
+  if (!FINE_POINTER || REDUCED) return;
 
-  if (!FINE_POINTER || REDUCED) {
-    follower.style.display = 'none';
-    return;
+  let dot = document.querySelector('.cursor-dot');
+  if (!dot) {
+    dot = document.querySelector('.cursor') || document.createElement('div');
+    dot.className = 'cursor-dot';
+    document.body.appendChild(dot);
+  }
+
+  let follower = document.querySelector('.cursor-follower');
+  if (!follower) {
+    follower = document.createElement('div');
+    follower.className = 'cursor-follower';
+    document.body.appendChild(follower);
   }
 
   let mx = -100, my = -100;
@@ -110,33 +120,109 @@ function initCursor() {
   window.addEventListener('mousemove', (e) => {
     mx = e.clientX;
     my = e.clientY;
+    
+    // Dot posicionado instantaneamente sem atraso
+    dot.style.transform = `translate3d(${mx}px, ${my}px, 0)`;
+
     if (!isMoving) {
       isMoving = true;
       fx = mx;
       fy = my;
-      follower.style.opacity = '1';
+      dot.classList.add('active');
+      follower.classList.add('active');
     }
   }, { passive: true });
 
   document.addEventListener('mouseleave', () => {
     isMoving = false;
-    follower.style.opacity = '0';
+    dot.classList.remove('active');
+    follower.classList.remove('active');
   });
 
+  // Loop suave com interpolação (lerp) para o anel seguidor
   const loop = () => {
     if (isMoving) {
-      fx += (mx - fx) * 0.18;
-      fy += (my - fy) * 0.18;
-      follower.style.left = fx + 'px';
-      follower.style.top = fy + 'px';
+      fx += (mx - fx) * 0.16;
+      fy += (my - fy) * 0.16;
+      follower.style.transform = `translate3d(${fx}px, ${fy}px, 0)`;
     }
     requestAnimationFrame(loop);
   };
   requestAnimationFrame(loop);
 
-  document.querySelectorAll('a, button, summary, input, .filter-btn, .pc-links a').forEach(el => {
-    el.addEventListener('mouseenter', () => follower.classList.add('hover'));
-    el.addEventListener('mouseleave', () => follower.classList.remove('hover'));
+  // Efeito de clique (Ripple Pulse)
+  window.addEventListener('mousedown', (e) => {
+    follower.classList.add('clicked');
+    const ripple = document.createElement('div');
+    ripple.className = 'cursor-ripple';
+    ripple.style.left = e.clientX + 'px';
+    ripple.style.top = e.clientY + 'px';
+    document.body.appendChild(ripple);
+    setTimeout(() => ripple.remove(), 550);
+  });
+
+  window.addEventListener('mouseup', () => {
+    follower.classList.remove('clicked');
+  });
+
+  // Hover states sobre elementos clicáveis
+  const hoverSelector = 'a, button, summary, input, select, textarea, .filter-btn, .pc-links a, .btn-primary, .btn-ghost, .cta-btn, .menu-link, .stat-cell, .proj-item, .cert-card, .tool-card';
+  
+  document.querySelectorAll(hoverSelector).forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      dot.classList.add('hover');
+      follower.classList.add('hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      dot.classList.remove('hover');
+      follower.classList.remove('hover');
+    });
+  });
+}
+
+// ── BOTÕES MAGNÉTICOS ─────────────────────────────────────────
+function initMagnetic() {
+  if (!FINE_POINTER || REDUCED) return;
+
+  const elements = document.querySelectorAll('.btn-primary, .btn-ghost, .cta-btn, #burger, #toTop, .filter-btn, [data-magnetic]');
+
+  elements.forEach(el => {
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      if (HAS_GSAP) {
+        gsap.to(el, { x: x * 0.32, y: y * 0.32, duration: 0.3, ease: 'power2.out' });
+      } else {
+        el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+      }
+    });
+
+    el.addEventListener('mouseleave', () => {
+      if (HAS_GSAP) {
+        gsap.to(el, { x: 0, y: 0, duration: 0.6, ease: 'elastic.out(1, 0.35)' });
+      } else {
+        el.style.transform = '';
+      }
+    });
+  });
+}
+
+// ── SPOTLIGHT DE ILUMINAÇÃO NOS CARDS ─────────────────────────
+function initCardSpotlights() {
+  if (!FINE_POINTER) return;
+
+  const cards = document.querySelectorAll('.project-card, .split-card, .tool-card, .stat-cell, .cert-card, .cv-entry, .proj-item');
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    });
   });
 }
 

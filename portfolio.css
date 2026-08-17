@@ -1656,31 +1656,154 @@ summary,
   cursor: pointer;
 }
 
-.cursor {
-  display: none;
-}
+/* ============================================================
+   CUSTOM CURSOR SYSTEM & INTERACTIVE EFFECTS
+   ============================================================ */
+@media (pointer: fine) {
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(255, 176, 32, 0.95), 0 0 20px rgba(255, 176, 32, 0.5);
+    transition: width 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+                height 0.2s cubic-bezier(0.25, 1, 0.5, 1),
+                background 0.2s ease,
+                opacity 0.25s ease;
+    will-change: transform;
+    opacity: 0;
+  }
 
-.cursor-follower {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(255, 176, 32, 0.5);
-  background: rgba(255, 176, 32, 0.05);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity .25s ease, width .25s ease, height .25s ease, background .25s ease, border-color .25s ease;
-}
+  .cursor-dot.active {
+    opacity: 1;
+  }
 
-.cursor-follower.hover {
-  width: 52px;
-  height: 52px;
-  background: rgba(255, 176, 32, 0.12);
-  border-color: var(--accent);
+  .cursor-dot.hover {
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 1);
+  }
+
+  .cursor,
+  .cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid rgba(255, 176, 32, 0.65);
+    background: radial-gradient(circle, rgba(255, 176, 32, 0.12) 0%, rgba(255, 176, 32, 0.02) 65%, transparent 100%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    box-shadow: 0 0 16px rgba(255, 176, 32, 0.18);
+    transition: opacity 0.3s ease,
+                width 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+                height 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+                background 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+    will-change: transform;
+  }
+
+  .cursor-follower.active {
+    opacity: 1;
+  }
+
+  .cursor-follower.hover {
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(255, 176, 32, 0.24) 0%, rgba(255, 176, 32, 0.06) 60%, transparent 100%);
+    border-color: var(--accent);
+    box-shadow: 0 0 25px rgba(255, 176, 32, 0.4);
+  }
+
+  .cursor-follower.clicked {
+    width: 28px;
+    height: 28px;
+    border-color: #ffffff;
+    background: rgba(255, 176, 32, 0.35);
+    box-shadow: 0 0 25px rgba(255, 176, 32, 0.7);
+  }
+
+  .cursor-ripple {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.9;
+    animation: cursorRippleAnim 0.55s cubic-bezier(0.1, 0.8, 0.25, 1) forwards;
+  }
+
+  @keyframes cursorRippleAnim {
+    0% {
+      transform: translate(-50%, -50%) scale(0.6);
+      opacity: 0.95;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(3.2);
+      opacity: 0;
+    }
+  }
+
+  /* Spotlight nos cards interativos */
+  .project-card,
+  .split-card,
+  .tool-card,
+  .stat-cell,
+  .cert-card,
+  .cv-entry,
+  .proj-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-card::before,
+  .split-card::before,
+  .tool-card::before,
+  .stat-cell::before,
+  .cert-card::before,
+  .cv-entry::before,
+  .proj-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      450px circle at var(--mouse-x, -500px) var(--mouse-y, -500px),
+      rgba(255, 176, 32, 0.08),
+      transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+  }
+
+  .project-card:hover::before,
+  .split-card:hover::before,
+  .tool-card:hover::before,
+  .stat-cell:hover::before,
+  .cert-card:hover::before,
+  .cv-entry:hover::before,
+  .proj-item:hover::before {
+    opacity: 1;
+  }
 }
 
 .preloader {
