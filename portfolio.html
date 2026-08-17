@@ -4,337 +4,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>João Lamim — Currículo · Engenheiro de Software</title>
+  <title>João Lamim — Engenheiro de Software</title>
   <meta name="description"
-    content="Currículo online de João Lamim — engenheiro de software. Experiência profissional, formação, certificações, competências técnicas e contato.">
-  <meta name="author" content="João Lamim">
-  <meta name="theme-color" content="#0A0A0B">
-  <link rel="canonical" href="https://joaolamim.dev/">
-
-  <meta property="og:type" content="profile">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="João Lamim — Engenheiro de Software">
-  <meta property="og:description" content="Currículo online: experiência, formação, competências e contato.">
-  <meta name="twitter:card" content="summary">
+    content="Currículo de João Lamim — engenheiro de software. Experiência, formação, competências e contato.">
+  <meta name="theme-color" content="#0D0D0F">
 
   <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A0A0B'/%3E%3Ctext x='16' y='23' font-family='Arial Black,sans-serif' font-size='16' font-weight='900' text-anchor='middle' fill='%23FFB020'%3EJL%3C/text%3E%3C/svg%3E">
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230D0D0F'/%3E%3Ctext x='16' y='23' font-family='Arial,sans-serif' font-size='15' font-weight='700' text-anchor='middle' fill='%23FFB020'%3EJL%3C/text%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
 
   <link rel="stylesheet" href="portfolio.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "João Lamim",
-    "jobTitle": "Engenheiro de Software",
-    "email": "mailto:joao.lamim@doqt.com.br",
-    "address": { "@type": "PostalAddress", "addressCountry": "BR" },
-    "knowsLanguage": ["Português", "Inglês"],
-    "knowsAbout": ["TypeScript", "Node.js", "Python", "PostgreSQL", "AWS", "Docker", "React"],
-    "url": "https://joaolamim.dev/"
-  }
-  </script>
 </head>
 
 <body>
 
-  <a class="skip-link" href="#cv">Pular para o currículo</a>
-
-  <div class="cursor-follower" aria-hidden="true"></div>
-
-  <!-- PRELOADER -->
-  <div class="preloader">
-    <div>
-      <div class="preloader-title">JOÃO <em>LAMIM</em></div>
-      <div class="preloader-bar">
-        <div class="preloader-progress"></div>
-      </div>
-    </div>
-  </div>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
 
   <div id="progress" aria-hidden="true"></div>
-  <button id="toTop" type="button" aria-label="Voltar ao topo">↑</button>
 
-  <!-- ============================================================
-     MENU OVERLAY
-     ============================================================ -->
-  <nav id="overlay-menu" aria-label="Menu principal" aria-hidden="true">
-    <div>
-      <div class="menu-label">Seções do currículo</div>
-      <a class="menu-link" href="#cv">Perfil</a>
-      <a class="menu-link" href="#experience">Experiência</a>
-      <a class="menu-link" href="#skills">Competências</a>
-      <a class="menu-link" href="#education">Formação</a>
-      <a class="menu-link" href="#certs">Certificações</a>
-      <a class="menu-link" href="#projects">Projetos</a>
-      <a class="menu-link accent" href="#contact">Contato</a>
-    </div>
-    <div class="menu-divider"></div>
-    <div class="menu-label">Links</div>
-    <div class="menu-social">
-      <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="mailto:joao.lamim@doqt.com.br">E-mail</a>
-      <a href="#" id="printLink">Baixar em PDF</a>
-    </div>
-  </nav>
-
-  <!-- ============================================================
-     HEADER
-     ============================================================ -->
-  <header id="siteHeader">
-    <a class="logo" href="#cv">
-      <b>JL</b>
-      <span>Curriculum Vitae</span>
-    </a>
-    <div class="nav-right">
-      <div class="nav-inline">
-        <a href="#experience" data-nav>Experiência</a>
-        <a href="#skills" data-nav>Competências</a>
-        <a href="#education" data-nav>Formação</a>
-      </div>
-      <a class="cta-btn" href="#contact">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <rect x="2" y="4" width="20" height="16" rx="2" />
-          <path d="M22 6l-10 7L2 6" />
-        </svg>
-        Contato
-      </a>
-      <button id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="overlay-menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <header class="topbar">
+    <a class="topbar-name" href="#main">João Lamim</a>
+    <nav class="topbar-nav" aria-label="Seções">
+      <a href="#experiencia">Experiência</a>
+      <a href="#competencias">Competências</a>
+      <a href="#formacao">Formação</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <button class="btn-print" type="button" id="printBtn">Imprimir / PDF</button>
   </header>
 
-  <!-- ============================================================
-     CABEÇALHO DO CURRÍCULO
-     ============================================================ -->
-  <section class="cv-hero" id="cv">
+  <main id="main">
 
-    <svg class="hero-bg-lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" fill="none"
-      aria-hidden="true">
-      <path d="M-100 600 C200 700 400 300 700 350 C900 390 1000 600 1300 500 C1500 430 1600 200 1800 150"
-        stroke="rgba(255,255,255,0.08)" stroke-width="1" />
-      <path d="M-50 400 C150 500 300 200 600 250 C850 290 900 500 1200 380 C1400 290 1500 100 1700 50"
-        stroke="rgba(255,176,32,0.09)" stroke-width="0.8" />
-      <path d="M0 200 C200 280 350 80 600 100 C820 120 870 320 1150 200 C1330 120 1420 -20 1620 -70"
-        stroke="rgba(255,255,255,0.06)" stroke-width="0.8" />
-    </svg>
+    <!-- ── IDENTIFICAÇÃO ─────────────────────────────────────── -->
+    <section class="intro">
+      <div class="intro-glow" aria-hidden="true"></div>
 
-    <div class="hero-ghost" aria-hidden="true">CV</div>
-
-    <div class="cv-head">
-      <!-- Coluna esquerda: identificação -->
-      <div class="cv-id">
-        <div class="cv-avatar reveal" aria-hidden="true">JL</div>
-        <div>
-          <h1 class="cv-name reveal">JOÃO <em>LAMIM</em></h1>
-          <p class="cv-role reveal" style="transition-delay:.08s">Engenheiro de Software · Back-end &amp; Produto</p>
-          <div class="hero-status reveal" style="transition-delay:.14s">
-            <span class="status-dot" aria-hidden="true"></span>
-            Aberto a novas oportunidades
-          </div>
-        </div>
-      </div>
-
-      <!-- Coluna direita: dados de contato -->
-      <ul class="cv-contact stagger" aria-label="Dados de contato">
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="M22 6l-10 7L2 6" />
-          </svg>
-          <a href="mailto:joao.lamim@doqt.com.br">joao.lamim@doqt.com.br</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012 4.2 2 2 0 014 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8.1 9.7a16 16 0 006 6l1.3-1.1a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.9 2.1z" />
-          </svg>
-          <a href="tel:+5500000000000">+55 (00) 00000-0000</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          <span>Brasil · Remoto (GMT-3)</span>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.7 4.7 0 00-1.3-3.2 4.4 4.4 0 00-.1-3.3s-1.4-.4-4.6 1.7a11.3 11.3 0 00-6 0C5.8 2.9 4.4 3.3 4.4 3.3a4.4 4.4 0 00-.1 3.3A4.7 4.7 0 003 9.8c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V22" />
-          </svg>
-          <a href="https://github.com/" target="_blank" rel="noopener">github.com/seu-usuario</a>
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
-            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
-            <rect x="2" y="9" width="4" height="12" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/seu-perfil</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Resumo profissional -->
-    <div class="cv-summary reveal" style="transition-delay:.2s">
-      <div class="section-label">Resumo profissional</div>
-      <p>
-        Engenheiro de software com <b>6 anos de experiência</b> em desenvolvimento web, com foco em back-end,
-        modelagem de dados e integrações. Atuo do desenho da arquitetura ao deploy, com histórico de reduzir latência
-        e custo de operação em sistemas em produção. Experiência em times remotos, metodologias ágeis e mentoria de
-        desenvolvedores em início de carreira.
+      <p class="status reveal">
+        <span class="status-dot" aria-hidden="true"></span>
+        Aberto a novas oportunidades
       </p>
-      <div class="cv-actions">
-        <button class="btn-primary" type="button" id="printBtn">
-          Baixar / imprimir currículo
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-            aria-hidden="true">
-            <path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5h20v5a2 2 0 01-2 2h-2M6 14h12v8H6z" />
-          </svg>
-        </button>
-        <a class="btn-ghost" href="mailto:joao.lamim@doqt.com.br">Enviar e-mail</a>
+
+      <h1 class="reveal d1">João Lamim</h1>
+      <p class="role reveal d2">Engenheiro de Software · Back-end &amp; Produto</p>
+
+      <ul class="contact reveal d3">
+        <li><a href="mailto:joao.lamim@doqt.com.br">joao.lamim@doqt.com.br</a></li>
+        <li><a href="tel:+5500000000000">+55 (00) 00000-0000</a></li>
+        <li>Brasil · Remoto (GMT-3)</li>
+        <li><a href="https://github.com/" target="_blank" rel="noopener">github.com/seu-usuario</a></li>
+        <li><a href="https://linkedin.com/" target="_blank" rel="noopener">linkedin.com/in/seu-perfil</a></li>
+      </ul>
+
+      <p class="summary reveal d4">
+        Engenheiro de software com 6 anos de experiência em desenvolvimento web, com foco em back-end, modelagem de
+        dados e integrações. Atuo do desenho da arquitetura ao deploy, com histórico de reduzir latência e custo de
+        operação em sistemas em produção. Experiência em times remotos e mentoria de desenvolvedores.
+      </p>
+
+      <div class="quick-stats reveal d5">
+        <div><b data-count="6">0</b><span>anos de experiência</span></div>
+        <div><b data-count="12">0</b><span>sistemas em produção</span></div>
+        <div><b data-count="4">0</b><span>empresas</span></div>
+        <div><b data-count="5">0</b><span>devs mentorados</span></div>
       </div>
-    </div>
+    </section>
 
-    <div class="scroll-cue" aria-hidden="true">Role para o currículo completo</div>
-  </section>
+    <!-- ── EXPERIÊNCIA ───────────────────────────────────────── -->
+    <section id="experiencia">
+      <h2 class="reveal"><span class="h2-num">01</span>Experiência profissional</h2>
 
-  <!-- ============================================================
-     NÚMEROS
-     ============================================================ -->
-  <section class="stats-bar stagger" aria-label="Resumo em números">
-    <div class="stat-cell">
-      <div class="stat-val" data-count="6">0</div>
-      <div class="stat-lbl">Anos de experiência</div>
-      <div class="stat-sub">desde 2019</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-val" data-count="4">0</div>
-      <div class="stat-lbl">Empresas</div>
-      <div class="stat-sub">estágio a sênior</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-val" data-count="12">0</div>
-      <div class="stat-lbl">Sistemas em produção</div>
-      <div class="stat-sub">APIs e serviços</div>
-    </div>
-    <div class="stat-cell">
-      <div class="stat-val" data-count="5">0</div>
-      <div class="stat-lbl">Devs mentorados</div>
-      <div class="stat-sub">júnior e estágio</div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-     EXPERIÊNCIA PROFISSIONAL
-     ============================================================ -->
-  <section class="cv-section" id="experience">
-    <div class="section-label reveal">Histórico</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">EXPERIÊNCIA<br><em>profissional</em></h2>
-
-    <div class="cv-list">
-
-      <article class="cv-entry reveal">
-        <div class="cv-entry-side">
-          <div class="cv-period">2024 — atual</div>
-          <div class="cv-badge">Atual</div>
+      <article class="entry reveal">
+        <div class="entry-head">
+          <h3>Engenheiro de Software Sênior</h3>
+          <span class="period current">2024 — atual</span>
         </div>
-        <div class="cv-entry-main">
-          <h3 class="cv-entry-title">Engenheiro de Software Sênior</h3>
-          <div class="cv-entry-org">Empresa Atual · Remoto · Tempo integral</div>
-          <ul class="cv-bullets">
-            <li>Responsável pela arquitetura da camada de integrações, unificando serviços externos atrás de uma API
-              interna estável e versionada.</li>
-            <li>Reduzi a latência p95 dos endpoints críticos de 1,2s para 180ms com cache, revisão de índices e
-              eliminação de consultas N+1.</li>
-            <li>Implantei observabilidade (métricas, logs estruturados e alertas), derrubando o tempo médio de
-              resolução de incidentes em cerca de 60%.</li>
-            <li>Conduzo revisões de código e definição de padrões técnicos para um time de 6 pessoas.</li>
-          </ul>
-          <div class="cv-tags">
-            <span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span><span>Docker</span>
-          </div>
-        </div>
+        <p class="org">Empresa Atual · Remoto</p>
+        <ul class="bullets">
+          <li>Arquitetura da camada de integrações, unificando serviços externos atrás de uma API interna versionada.</li>
+          <li>Latência p95 dos endpoints críticos de <b>1,2s para 180ms</b>, com cache, revisão de índices e fim das
+            consultas N+1.</li>
+          <li>Implantação de métricas, logs estruturados e alertas — tempo de resolução de incidentes <b>60% menor</b>.
+          </li>
+          <li>Revisão de código e definição de padrões técnicos para um time de 6 pessoas.</li>
+        </ul>
+        <p class="tags">
+          <span>Node.js</span><span>TypeScript</span><span>PostgreSQL</span><span>Redis</span><span>AWS</span><span>Docker</span>
+        </p>
       </article>
 
-      <article class="cv-entry reveal">
-        <div class="cv-entry-side">
-          <div class="cv-period">2022 — 2024</div>
+      <article class="entry reveal">
+        <div class="entry-head">
+          <h3>Desenvolvedor Pleno</h3>
+          <span class="period">2022 — 2024</span>
         </div>
-        <div class="cv-entry-main">
-          <h3 class="cv-entry-title">Desenvolvedor Pleno</h3>
-          <div class="cv-entry-org">Empresa Anterior · Híbrido · Tempo integral</div>
-          <ul class="cv-bullets">
-            <li>Desenvolvi funcionalidades de ponta a ponta em produto SaaS, do banco de dados à interface em React.</li>
-            <li>Migrei o processo de deploy manual para pipeline automatizado, reduzindo o ciclo de 40 para 6 minutos.
-            </li>
-            <li>Melhorei a performance do front-end até nota 98 no Lighthouse, com foco em LCP e code splitting.</li>
-            <li>Participei do processo de contratação como avaliador técnico em entrevistas.</li>
-          </ul>
-          <div class="cv-tags">
-            <span>React</span><span>Node.js</span><span>GraphQL</span><span>GitHub Actions</span>
-          </div>
-        </div>
+        <p class="org">Empresa Anterior · Híbrido</p>
+        <ul class="bullets">
+          <li>Desenvolvimento de funcionalidades de ponta a ponta em produto SaaS, do banco à interface.</li>
+          <li>Migração do deploy manual para pipeline automatizado: ciclo de <b>40 para 6 minutos</b>.</li>
+          <li>Performance do front-end até <b>nota 98 no Lighthouse</b>, com foco em LCP e code splitting.</li>
+        </ul>
+        <p class="tags">
+          <span>React</span><span>Node.js</span><span>GraphQL</span><span>GitHub Actions</span>
+        </p>
       </article>
 
-      <article class="cv-entry reveal">
-        <div class="cv-entry-side">
-          <div class="cv-period">2020 — 2022</div>
+      <article class="entry reveal">
+        <div class="entry-head">
+          <h3>Desenvolvedor Júnior</h3>
+          <span class="period">2020 — 2022</span>
         </div>
-        <div class="cv-entry-main">
-          <h3 class="cv-entry-title">Desenvolvedor Júnior</h3>
-          <div class="cv-entry-org">Primeira Empresa · Presencial · Tempo integral</div>
-          <ul class="cv-bullets">
-            <li>Mantive e modernizei sistema legado crítico, cobrindo com testes as rotinas de maior risco antes de
-              refatorar.</li>
-            <li>Construí pipeline de ingestão que processa mais de 2 milhões de registros por dia com reprocessamento
-              idempotente.</li>
-            <li>Documentei processos internos que antes existiam só na cabeça de duas pessoas do time.</li>
-          </ul>
-          <div class="cv-tags">
-            <span>Python</span><span>SQL</span><span>Airflow</span><span>Docker</span>
-          </div>
-        </div>
+        <p class="org">Primeira Empresa · Presencial</p>
+        <ul class="bullets">
+          <li>Manutenção e modernização de sistema legado crítico, com testes nas rotinas de maior risco.</li>
+          <li>Pipeline de ingestão processando mais de <b>2 milhões de registros por dia</b>, com reprocessamento
+            idempotente.</li>
+        </ul>
+        <p class="tags">
+          <span>Python</span><span>SQL</span><span>Airflow</span><span>Docker</span>
+        </p>
       </article>
 
-      <article class="cv-entry reveal">
-        <div class="cv-entry-side">
-          <div class="cv-period">2019 — 2020</div>
+      <article class="entry reveal">
+        <div class="entry-head">
+          <h3>Estagiário de Desenvolvimento</h3>
+          <span class="period">2019 — 2020</span>
         </div>
-        <div class="cv-entry-main">
-          <h3 class="cv-entry-title">Estagiário de Desenvolvimento</h3>
-          <div class="cv-entry-org">Onde tudo começou · Presencial</div>
-          <ul class="cv-bullets">
-            <li>Automatizei relatórios e rotinas manuais do time administrativo, economizando horas semanais.</li>
-            <li>Dei suporte ao time de desenvolvimento em correções e pequenas melhorias no sistema interno.</li>
-          </ul>
-          <div class="cv-tags">
-            <span>Python</span><span>Bash</span><span>Excel/VBA</span>
-          </div>
-        </div>
+        <p class="org">Onde tudo começou · Presencial</p>
+        <ul class="bullets">
+          <li>Automação de relatórios e rotinas manuais, economizando horas semanais do time.</li>
+        </ul>
+        <p class="tags">
+          <span>Python</span><span>Bash</span>
+        </p>
       </article>
+    </section>
 
-    </div>
-  </section>
+    <!-- ── COMPETÊNCIAS ──────────────────────────────────────── -->
+    <section id="competencias">
+      <h2 class="reveal"><span class="h2-num">02</span>Competências</h2>
 
-  <!-- ============================================================
-     COMPETÊNCIAS TÉCNICAS
-     ============================================================ -->
-  <section class="cv-section alt" id="skills">
-    <div class="section-label reveal">Competências</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">HABILIDADES<br><em>técnicas</em></h2>
-
-    <div class="skills-layout">
-      <!-- Barras de nível -->
-      <div class="skill-bars stagger">
+      <div class="skills reveal">
         <div class="skill-row">
           <div class="skill-head"><span>TypeScript / JavaScript</span><i>Avançado</i></div>
           <div class="skill-track"><span style="--lvl:92%"></span></div>
@@ -361,268 +176,113 @@
         </div>
       </div>
 
-      <!-- Listas de apoio -->
-      <div class="skills-aside">
-        <div class="aside-block">
-          <h3>Também trabalho com</h3>
-          <div class="cv-tags">
-            <span>NestJS</span><span>FastAPI</span><span>Redis</span><span>GraphQL</span><span>Prisma</span>
-            <span>Jest</span><span>Vitest</span><span>Terraform</span><span>Grafana</span><span>Git</span>
-          </div>
+      <dl class="skill-list reveal">
+        <div>
+          <dt>Também uso</dt>
+          <dd>NestJS · FastAPI · GraphQL · Prisma · Jest · Terraform · Grafana · Git</dd>
         </div>
+        <div>
+          <dt>Idiomas</dt>
+          <dd>Português nativo · Inglês avançado · Espanhol básico</dd>
+        </div>
+      </dl>
+    </section>
 
-        <div class="aside-block">
-          <h3>Idiomas</h3>
-          <ul class="lang-list">
-            <li><span>Português</span><i>Nativo</i></li>
-            <li><span>Inglês</span><i>Avançado — leitura, escrita e reuniões</i></li>
-            <li><span>Espanhol</span><i>Básico</i></li>
-          </ul>
-        </div>
+    <!-- ── FORMAÇÃO ──────────────────────────────────────────── -->
+    <section id="formacao">
+      <h2 class="reveal"><span class="h2-num">03</span>Formação</h2>
 
-        <div class="aside-block">
-          <h3>Competências comportamentais</h3>
-          <ul class="soft-list">
-            <li>Comunicação técnica escrita — documentos de decisão e RFCs</li>
-            <li>Autonomia em time remoto e assíncrono</li>
-            <li>Mentoria e revisão de código construtiva</li>
-            <li>Tradução de requisito de negócio em solução técnica</li>
-          </ul>
+      <article class="entry reveal">
+        <div class="entry-head">
+          <h3>Bacharelado em Ciência da Computação</h3>
+          <span class="period">2018 — 2022</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-     FORMAÇÃO
-     ============================================================ -->
-  <section class="cv-section" id="education">
-    <div class="section-label reveal">Formação acadêmica</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">EDUCAÇÃO</h2>
-
-    <div class="cv-list">
-      <article class="cv-entry reveal">
-        <div class="cv-entry-side">
-          <div class="cv-period">2018 — 2022</div>
-        </div>
-        <div class="cv-entry-main">
-          <h3 class="cv-entry-title">Bacharelado em Ciência da Computação</h3>
-          <div class="cv-entry-org">Nome da Universidade · Concluído</div>
-          <ul class="cv-bullets">
-            <li>Trabalho de conclusão sobre otimização de consultas em bancos relacionais de alto volume.</li>
-            <li>Monitor de disciplina de estrutura de dados por dois semestres.</li>
-          </ul>
-        </div>
+        <p class="org">Nome da Universidade</p>
       </article>
 
-      <article class="cv-entry reveal">
-        <div class="cv-entry-side">
-          <div class="cv-period">2023</div>
+      <article class="entry reveal">
+        <div class="entry-head">
+          <h3>Especialização em Arquitetura de Software</h3>
+          <span class="period">2023</span>
         </div>
-        <div class="cv-entry-main">
-          <h3 class="cv-entry-title">Especialização em Arquitetura de Software</h3>
-          <div class="cv-entry-org">Instituição · Pós-graduação lato sensu</div>
-          <ul class="cv-bullets">
-            <li>Ênfase em sistemas distribuídos, mensageria e padrões de integração.</li>
-          </ul>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ============================================================
-     CERTIFICAÇÕES E CURSOS
-     ============================================================ -->
-  <section class="cv-section alt" id="certs">
-    <div class="section-label reveal">Certificações e cursos</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">QUALIFICAÇÕES</h2>
-
-    <div class="cert-grid stagger">
-      <div class="cert-card">
-        <div class="cert-year">2025</div>
-        <h3 class="cert-name">AWS Certified Developer — Associate</h3>
-        <div class="cert-org">Amazon Web Services</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-year">2024</div>
-        <h3 class="cert-name">Arquitetura de Microsserviços</h3>
-        <div class="cert-org">Curso livre · 40h</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-year">2023</div>
-        <h3 class="cert-name">PostgreSQL para Desenvolvedores</h3>
-        <div class="cert-org">Curso livre · 30h</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-year">2022</div>
-        <h3 class="cert-name">Inglês — Nível Avançado</h3>
-        <div class="cert-org">Escola de idiomas</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-year">2022</div>
-        <h3 class="cert-name">Scrum Foundation</h3>
-        <div class="cert-org">Certificação profissional</div>
-      </div>
-      <div class="cert-card">
-        <div class="cert-year">2021</div>
-        <h3 class="cert-name">Docker e Kubernetes</h3>
-        <div class="cert-org">Curso livre · 24h</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-     PROJETOS RELEVANTES
-     ============================================================ -->
-  <section class="cv-section" id="projects">
-    <div class="section-label reveal">Portfólio</div>
-    <h2 class="section-title reveal" style="transition-delay:.08s">PROJETOS<br><em>relevantes</em></h2>
-
-    <div class="proj-list stagger">
-      <article class="proj-item">
-        <div class="proj-main">
-          <h3 class="proj-title">Gateway de Integrações</h3>
-          <p class="proj-desc">Camada única que normaliza integrações externas por trás de uma API estável, com retry,
-            fila e observabilidade de ponta a ponta.</p>
-          <div class="cv-tags"><span>Node.js</span><span>TypeScript</span><span>Redis</span><span>Docker</span></div>
-        </div>
-        <div class="proj-meta">
-          <div class="proj-metric">p95 1,2s → 180ms</div>
-          <a class="proj-link" href="#">Ver detalhes ↗</a>
-        </div>
+        <p class="org">Instituição · Pós-graduação</p>
       </article>
 
-      <article class="proj-item">
-        <div class="proj-main">
-          <h3 class="proj-title">Painel de Métricas em Tempo Real</h3>
-          <p class="proj-desc">Interface de operação com streaming de dados, filtros salvos e gráficos legíveis mesmo
-            com milhares de pontos na tela.</p>
-          <div class="cv-tags"><span>React</span><span>TypeScript</span><span>WebSocket</span></div>
+      <h2 class="sub reveal"><span class="h2-num">03.1</span>Certificações</h2>
+      <ul class="certs reveal">
+        <li><span>AWS Certified Developer — Associate</span><i>2025</i></li>
+        <li><span>Arquitetura de Microsserviços — 40h</span><i>2024</i></li>
+        <li><span>PostgreSQL para Desenvolvedores — 30h</span><i>2023</i></li>
+        <li><span>Scrum Foundation</span><i>2022</i></li>
+      </ul>
+    </section>
+
+    <!-- ── PROJETOS ──────────────────────────────────────────── -->
+    <section id="projetos">
+      <h2 class="reveal"><span class="h2-num">04</span>Projetos</h2>
+
+      <article class="entry card reveal">
+        <div class="entry-head">
+          <h3>Gateway de Integrações</h3>
+          <span class="metric">p95 1,2s → 180ms</span>
         </div>
-        <div class="proj-meta">
-          <div class="proj-metric">Lighthouse 98</div>
-          <a class="proj-link" href="#">Ver detalhes ↗</a>
-        </div>
+        <p class="desc">Camada única que normaliza integrações externas por trás de uma API estável, com retry, fila e
+          observabilidade. <a href="#">Ver detalhes →</a></p>
+        <p class="tags">
+          <span>Node.js</span><span>TypeScript</span><span>Redis</span><span>Docker</span>
+        </p>
       </article>
 
-      <article class="proj-item">
-        <div class="proj-main">
-          <h3 class="proj-title">Pipeline de Ingestão de Dados</h3>
-          <p class="proj-desc">Coleta, valida e carrega grandes volumes diariamente, com reprocessamento idempotente e
-            alertas de qualidade de dados.</p>
-          <div class="cv-tags"><span>Python</span><span>Airflow</span><span>PostgreSQL</span></div>
+      <article class="entry card reveal">
+        <div class="entry-head">
+          <h3>Painel de Métricas em Tempo Real</h3>
+          <span class="metric">Lighthouse 98</span>
         </div>
-        <div class="proj-meta">
-          <div class="proj-metric">2M+ registros/dia</div>
-          <a class="proj-link" href="#">Ver detalhes ↗</a>
-        </div>
+        <p class="desc">Interface de operação com streaming de dados e gráficos legíveis com milhares de pontos na
+          tela. <a href="#">Ver detalhes →</a></p>
+        <p class="tags">
+          <span>React</span><span>TypeScript</span><span>WebSocket</span>
+        </p>
       </article>
 
-      <article class="proj-item">
-        <div class="proj-main">
-          <h3 class="proj-title">Biblioteca de Componentes</h3>
-          <p class="proj-desc">Design system acessível de código aberto, com tokens, tema claro/escuro e documentação
-            viva no Storybook.</p>
-          <div class="cv-tags"><span>TypeScript</span><span>Storybook</span><span>CSS</span></div>
+      <article class="entry card reveal">
+        <div class="entry-head">
+          <h3>Biblioteca de Componentes</h3>
+          <span class="metric">Open source</span>
         </div>
-        <div class="proj-meta">
-          <div class="proj-metric">WCAG AA</div>
-          <a class="proj-link" href="#" target="_blank" rel="noopener">GitHub ↗</a>
-        </div>
+        <p class="desc">Design system acessível, com tokens, tema claro/escuro e documentação viva.
+          <a href="#" target="_blank" rel="noopener">GitHub →</a></p>
+        <p class="tags">
+          <span>TypeScript</span><span>Storybook</span><span>CSS</span>
+        </p>
       </article>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============================================================
-     CONTATO
-     ============================================================ -->
-  <section class="cta-section" id="contact">
-    <div class="cta-bg" aria-hidden="true"></div>
-    <p class="cta-sub reveal">Disponível para conversar</p>
-    <h2 class="cta-headline reveal" style="transition-delay:.08s">
-      VAMOS FALAR SOBRE<br>A <em>vaga</em> OU O PROJETO?
-    </h2>
-    <div class="cta-actions reveal" style="transition-delay:.16s">
-      <a class="btn-primary" href="mailto:joao.lamim@doqt.com.br">
-        joao.lamim@doqt.com.br
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
-          aria-hidden="true">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </a>
-      <button class="btn-ghost" type="button" id="copyEmail" data-email="joao.lamim@doqt.com.br">Copiar e-mail</button>
-    </div>
-    <span class="copy-toast" id="copyToast" role="status">E-mail copiado</span>
-  </section>
+    <!-- ── CONTATO ───────────────────────────────────────────── -->
+    <section id="contato">
+      <h2 class="reveal"><span class="h2-num">05</span>Contato</h2>
 
-  <!-- ============================================================
-     MARQUEE
-     ============================================================ -->
-  <div class="marquee-section">
-    <div class="marquee-track" aria-hidden="true">
-      <span class="marquee-item">TypeScript</span>
-      <span class="marquee-item">Node.js</span>
-      <span class="marquee-item">React</span>
-      <span class="marquee-item">PostgreSQL</span>
-      <span class="marquee-item">Docker</span>
-      <span class="marquee-item">AWS</span>
-      <span class="marquee-item">Python</span>
-      <span class="marquee-item">Redis</span>
-      <span class="marquee-item">GraphQL</span>
-      <span class="marquee-item">Terraform</span>
-      <!-- duplicata para loop contínuo -->
-      <span class="marquee-item">TypeScript</span>
-      <span class="marquee-item">Node.js</span>
-      <span class="marquee-item">React</span>
-      <span class="marquee-item">PostgreSQL</span>
-      <span class="marquee-item">Docker</span>
-      <span class="marquee-item">AWS</span>
-      <span class="marquee-item">Python</span>
-      <span class="marquee-item">Redis</span>
-      <span class="marquee-item">GraphQL</span>
-      <span class="marquee-item">Terraform</span>
-    </div>
-  </div>
+      <div class="contato-box reveal">
+        <p class="desc">Aberto a novas oportunidades e projetos. Respondo e-mails em até 24 horas em dias úteis.</p>
+        <p class="contato-acoes">
+          <a class="btn" href="mailto:joao.lamim@doqt.com.br">joao.lamim@doqt.com.br</a>
+          <button class="btn ghost" type="button" id="copyEmail"
+            data-email="joao.lamim@doqt.com.br">Copiar e-mail</button>
+          <span class="toast" id="copyToast" role="status"></span>
+        </p>
+      </div>
+    </section>
 
-  <!-- ============================================================
-     FOOTER
-     ============================================================ -->
+  </main>
+
   <footer>
-    <div class="footer-big" aria-hidden="true">JOÃO<br>LAMIM</div>
-
-    <div class="footer-nav">
-      <div>
-        <div class="footer-col-title">Currículo</div>
-        <a class="footer-link" href="#cv">Perfil</a>
-        <a class="footer-link" href="#experience">Experiência</a>
-        <a class="footer-link" href="#skills">Competências</a>
-        <a class="footer-link" href="#education">Formação</a>
-        <a class="footer-link accent" href="#contact">Contato</a>
-      </div>
-      <div>
-        <div class="footer-col-title">Perfis</div>
-        <a class="footer-link" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
-        <a class="footer-link" href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="footer-link" href="#" id="printLink2">Baixar em PDF</a>
-      </div>
-      <div>
-        <div class="footer-col-title">Contato</div>
-        <a class="footer-link" href="mailto:joao.lamim@doqt.com.br">joao.lamim@doqt.com.br</a>
-        <a class="footer-link" href="tel:+5500000000000">+55 (00) 00000-0000</a>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year">2026</span> João Lamim · Currículo atualizado em agosto de 2026.</span>
-      <a href="#cv">Voltar ao topo ↑</a>
-    </div>
+    <span>© <span id="year">2026</span> João Lamim</span>
+    <a href="#main">Voltar ao topo ↑</a>
   </footer>
 
-  <script defer src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script defer src="portfolio.js"></script>
+  <button id="toTop" type="button" aria-label="Voltar ao topo">↑</button>
 
+  <script src="portfolio.js" defer></script>
 </body>
 
 </html>
