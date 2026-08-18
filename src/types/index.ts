@@ -50,7 +50,6 @@ export interface Education {
   period: string;
   degree: string;
   institution: string;
-  description: string;
 }
 
 export interface Certification {

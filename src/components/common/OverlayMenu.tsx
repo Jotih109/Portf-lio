@@ -1,10 +1,19 @@
-﻿import React from 'react';
-import { personalInfo } from '../../data/portfolioData';
+import React from 'react';
 
 interface OverlayMenuProps {
   isOpen: boolean;
   onClose: () => void;
 }
+
+const MENU_LINKS = [
+  { id: 'cv', label: 'Início' },
+  { id: 'experience', label: 'Experiência' },
+  { id: 'education', label: 'Formação' },
+  { id: 'certs', label: 'Certificações' },
+  { id: 'skills', label: 'Habilidades' },
+  { id: 'projects', label: 'Projetos' },
+  { id: 'faq', label: 'Perguntas Frequentes' },
+];
 
 export const OverlayMenu: React.FC<OverlayMenuProps> = ({
   isOpen,
@@ -29,40 +38,18 @@ export const OverlayMenu: React.FC<OverlayMenuProps> = ({
     >
       <div>
         <div className="menu-label">Navegação</div>
-        <a className="menu-link" href="#hero" onClick={() => handleNav('hero')}>
-          Início
-        </a>
-        <a className="menu-link" href="#projects" onClick={() => handleNav('projects')}>
-          Projetos
-        </a>
-        <a className="menu-link" href="#services" onClick={() => handleNav('services')}>
-          O que eu entrego
-        </a>
-        <a className="menu-link" href="#stack" onClick={() => handleNav('stack')}>
-          Stack
-        </a>
-        <a className="menu-link" href="#experience" onClick={() => handleNav('experience')}>
-          Experiência
-        </a>
-        <a className="menu-link" href="#faq" onClick={() => handleNav('faq')}>
-          Perguntas Frequentes
-        </a>
+        {MENU_LINKS.map((link) => (
+          <a
+            key={link.id}
+            className="menu-link"
+            href={`#${link.id}`}
+            onClick={() => handleNav(link.id)}
+          >
+            {link.label}
+          </a>
+        ))}
         <a className="menu-link accent" href="#contact" onClick={() => handleNav('contact')}>
           Entrar em Contato
-        </a>
-      </div>
-
-      <div className="menu-divider" />
-      <div className="menu-label">Conectar</div>
-      <div className="menu-social">
-        <a href={personalInfo.links.github} target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-        <a href={personalInfo.links.linkedin} target="_blank" rel="noopener noreferrer">
-          LinkedIn
-        </a>
-        <a href={`mailto:${personalInfo.email}`}>
-          E-mail
         </a>
       </div>
     </nav>

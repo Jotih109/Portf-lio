@@ -29,7 +29,7 @@ export const CustomCursor: React.FC = () => {
       const target = e.target as HTMLElement | null;
       if (target) {
         const isInteractive = Boolean(
-          target.closest('a, button, input, textarea, summary, [role="button"], .project-card, .cert-card, .tool-card, .stat-cell')
+          target.closest('a, button, input, textarea, summary, [role="button"], .project-card, .cert-card, .tool-card, .stat-cell, .tech-badge')
         );
         setIsHover(isInteractive);
       }

@@ -1,10 +1,17 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { personalInfo } from '../../data/portfolioData';
 
 interface NavbarProps {
   isMenuOpen: boolean;
   onToggleMenu: () => void;
 }
+
+const NAV_LINKS = [
+  { id: 'experience', label: 'Experiência' },
+  { id: 'education', label: 'Formação' },
+  { id: 'skills', label: 'Habilidades' },
+  { id: 'projects', label: 'Projetos' },
+];
 
 export const Navbar: React.FC<NavbarProps> = ({
   isMenuOpen,
@@ -17,7 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
 
-      const sections = ['projects', 'services', 'stack', 'experience', 'faq', 'contact'];
+      const sections = ['experience', 'education', 'certs', 'skills', 'projects', 'faq', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -47,7 +54,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header id="siteHeader" className={isScrolled ? 'scrolled' : ''}>
       <a
         className="logo"
-        href="#hero"
+        href="#cv"
         onClick={(e) => {
           e.preventDefault();
           window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,34 +66,16 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       <div className="nav-right">
         <div className="nav-inline">
-          <a
-            href="#projects"
-            className={activeSection === 'projects' ? 'active' : ''}
-            onClick={(e) => handleLinkClick(e, 'projects')}
-          >
-            Projetos
-          </a>
-          <a
-            href="#services"
-            className={activeSection === 'services' ? 'active' : ''}
-            onClick={(e) => handleLinkClick(e, 'services')}
-          >
-            Especialidades
-          </a>
-          <a
-            href="#stack"
-            className={activeSection === 'stack' ? 'active' : ''}
-            onClick={(e) => handleLinkClick(e, 'stack')}
-          >
-            Stack
-          </a>
-          <a
-            href="#experience"
-            className={activeSection === 'experience' ? 'active' : ''}
-            onClick={(e) => handleLinkClick(e, 'experience')}
-          >
-            Experiência
-          </a>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.id}
+              href={`#${link.id}`}
+              className={activeSection === link.id ? 'active' : ''}
+              onClick={(e) => handleLinkClick(e, link.id)}
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
 
         <a

@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import confetti from 'canvas-confetti';
 
@@ -12,18 +12,16 @@ import { Footer } from './components/common/Footer';
 import { Toast } from './components/common/Toast';
 import { Marquee } from './components/common/Marquee';
 
-import { HeroSection } from './components/home/HeroSection';
-import { StatsBar } from './components/home/StatsBar';
-import { ManifestoSection } from './components/home/ManifestoSection';
+import { CvHero } from './components/cv/CvHero';
+import { CvExperience } from './components/cv/CvExperience';
+import { CvEducation } from './components/cv/CvEducation';
+import { CvCertifications } from './components/cv/CvCertifications';
+import { CvSkills } from './components/cv/CvSkills';
+
+import { TechCarousel } from './components/common/TechCarousel';
 import { ProjectsSection } from './components/home/ProjectsSection';
-import { ServicesSection } from './components/home/ServicesSection';
-import { StackSection } from './components/home/StackSection';
-import { ExperienceSection } from './components/home/ExperienceSection';
-import { PrinciplesSection } from './components/home/PrinciplesSection';
 import { FaqSection } from './components/home/FaqSection';
 import { ContactSection } from './components/home/ContactSection';
-
-import { homeStats } from './data/portfolioData';
 
 export const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,7 +87,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="portfolio-app">
-      <a className="skip-link" href="#hero">
+      <a className="skip-link" href="#cv">
         Pular para o conteúdo
       </a>
 
@@ -114,19 +112,15 @@ export const App: React.FC = () => {
         onClose={() => setIsMenuOpen(false)}
       />
 
-      {/* Main Portfolio Sections */}
-      <main>
-        <HeroSection
-          onNavigateProjects={() => scrollToSection('projects')}
-          onNavigateContact={() => scrollToSection('contact')}
-        />
-        <StatsBar stats={homeStats} label="Números da carreira" />
-        <ManifestoSection />
+      {/* Página única: currículo completo + projetos do portfólio */}
+      <main className="cv-main">
+        <CvHero />
+        <TechCarousel />
+        <CvExperience />
+        <CvEducation />
+        <CvCertifications />
+        <CvSkills />
         <ProjectsSection onNavigateContact={() => scrollToSection('contact')} />
-        <ServicesSection />
-        <StackSection />
-        <ExperienceSection />
-        <PrinciplesSection />
         <Marquee />
         <FaqSection />
         <ContactSection onCopyEmail={handleCopyEmail} />

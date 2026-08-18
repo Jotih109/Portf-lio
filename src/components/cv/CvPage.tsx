@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  personalInfo,
   cvStats,
   experiencesData,
   skillBarsData,
@@ -10,6 +9,7 @@ import {
   certificationsData,
   projectsData,
 } from '../../data/portfolioData';
+import { personalInfo } from '../../types';
 import { StatsBar } from '../home/StatsBar';
 import { Marquee } from '../common/Marquee';
 
@@ -68,10 +68,6 @@ export const CvPage: React.FC<CvPageProps> = ({ onCopyEmail, onNavigatePortfolio
               <p className="cv-role reveal in" style={{ transitionDelay: '.08s' }}>
                 {personalInfo.role}
               </p>
-              <div className="hero-status reveal in" style={{ transitionDelay: '.14s' }}>
-                <span className="status-dot" aria-hidden="true" />
-                {personalInfo.statusCvText}
-              </div>
             </div>
           </div>
 
@@ -248,9 +244,6 @@ export const CvPage: React.FC<CvPageProps> = ({ onCopyEmail, onNavigatePortfolio
               <div className="cv-entry-main">
                 <h3 className="cv-entry-title">{edu.degree}</h3>
                 <div className="cv-entry-org">{edu.institution}</div>
-                <p style={{ color: 'var(--ink-2)', fontSize: '0.95rem', marginTop: '0.4rem' }}>
-                  {edu.description}
-                </p>
               </div>
             </article>
           ))}

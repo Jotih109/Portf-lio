@@ -11,8 +11,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onCopyEmail }) =
       <div className="cta-bg" aria-hidden="true" />
       <p className="cta-sub reveal in">Vamos conversar</p>
       <h2 className="cta-headline reveal in" style={{ transitionDelay: '.08s' }}>
-        TEM UM <em>desafio</em><br />
-        TÉCNICO INTERESSANTE?
+        SE <em>INTERESSOU?</em><br />
+        ENTRE EM CONTATO
       </h2>
       <div className="cta-actions reveal in" style={{ transitionDelay: '.16s' }}>
         <a className="btn-primary" href={`mailto:${personalInfo.email}`}>
