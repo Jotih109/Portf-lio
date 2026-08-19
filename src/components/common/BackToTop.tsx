@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { scrollToTarget } from '../../utils/scroll';
 
 export const BackToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,12 +17,7 @@ export const BackToTop: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  const scrollToTop = () => scrollToTarget();
 
   return (
     <button

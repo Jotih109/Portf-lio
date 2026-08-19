@@ -1,4 +1,4 @@
-﻿export type ProjectCategory = 'all' | 'backend' | 'frontend' | 'infra';
+export type ProjectCategory = 'all' | 'backend' | 'frontend' | 'infra';
 
 export interface Project {
   id: string;
@@ -30,16 +30,6 @@ export interface Experience {
   bullets?: string[];
 }
 
-export interface SkillItem {
-  name: string;
-  frequency: 'Diário' | 'Frequente' | 'Ocasional';
-}
-
-export interface SkillCategory {
-  title: string;
-  skills: SkillItem[];
-}
-
 export interface SkillBar {
   name: string;
   level: number;
@@ -50,6 +40,7 @@ export interface Education {
   period: string;
   degree: string;
   institution: string;
+  description?: string;
 }
 
 export interface Certification {
@@ -58,22 +49,9 @@ export interface Certification {
   organization: string;
 }
 
-export interface Principle {
-  id: string;
-  name: string;
-  note: string;
-  icon: 'star' | 'activity' | 'zap' | 'shield';
-}
-
 export interface FaqItem {
   id: string;
   question: string;
   answer: string;
 }
 
-export interface StatItem {
-  value: number;
-  suffix?: string;
-  label: string;
-  sub: string;
-}

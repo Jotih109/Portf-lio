@@ -5,7 +5,7 @@ export const CvExperience: React.FC = () => {
   return (
     <section className="cv-section" id="experience">
       <div className="section-label reveal in">Histórico profissional</div>
-      <h2 className="section-title reveal in" style={{ transitionDelay: '.08s' }}>
+      <h2 className="section-title reveal in" style={{ animationDelay: '.08s' }}>
         EXPERIÊNCIA
       </h2>
 

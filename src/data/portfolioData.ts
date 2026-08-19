@@ -1,4 +1,11 @@
-﻿import { Project, Experience, SkillCategory, SkillBar, Education, Certification, Principle, FaqItem, StatItem } from '../types';
+﻿import {
+  Project,
+  Experience,
+  SkillBar,
+  Education,
+  Certification,
+  FaqItem,
+} from '../types';
 
 export const personalInfo = {
   name: 'João Lamim',
@@ -38,20 +45,6 @@ export const personalInfo = {
     'CI/CD',
   ],
 };
-
-export const homeStats: StatItem[] = [
-  { value: 6, label: 'Anos de experiência', sub: 'construindo produtos' },
-  { value: 30, label: 'Projetos entregues', sub: 'produção e clientes' },
-  { value: 12, label: 'APIs em produção', sub: 'REST e GraphQL' },
-  { value: 99, suffix: '%', label: 'Uptime médio', sub: 'alta disponibilidade' },
-];
-
-export const cvStats: StatItem[] = [
-  { value: 6, label: 'Anos de experiência', sub: 'desde 2019' },
-  { value: 4, label: 'Empresas', sub: 'estágio a sênior' },
-  { value: 12, label: 'Sistemas em produção', sub: 'APIs e serviços' },
-  { value: 30, label: 'Projetos entregues', sub: 'web e back-end' },
-];
 
 export const projectsData: Project[] = [
   {
@@ -111,45 +104,6 @@ export const projectsData: Project[] = [
     stack: ['Python', 'PostgreSQL', 'Redis'],
     links: [
       { label: 'Detalhes', href: '#contact' },
-    ],
-  },
-];
-
-export const stackCategories: SkillCategory[] = [
-  {
-    title: 'Linguagens',
-    skills: [
-      { name: 'TypeScript', frequency: 'Diário' },
-      { name: 'JavaScript', frequency: 'Diário' },
-      { name: 'Python', frequency: 'Frequente' },
-      { name: 'SQL', frequency: 'Diário' },
-    ],
-  },
-  {
-    title: 'Back-end',
-    skills: [
-      { name: 'Node.js', frequency: 'Diário' },
-      { name: 'NestJS', frequency: 'Frequente' },
-      { name: 'FastAPI', frequency: 'Frequente' },
-      { name: 'PostgreSQL / Redis', frequency: 'Diário' },
-    ],
-  },
-  {
-    title: 'Front-end',
-    skills: [
-      { name: 'React', frequency: 'Frequente' },
-      { name: 'Next.js', frequency: 'Frequente' },
-      { name: 'Vite', frequency: 'Frequente' },
-      { name: 'CSS Moderno', frequency: 'Diário' },
-    ],
-  },
-  {
-    title: 'Infra & Cloud',
-    skills: [
-      { name: 'Docker', frequency: 'Diário' },
-      { name: 'AWS', frequency: 'Frequente' },
-      { name: 'GitHub Actions', frequency: 'Diário' },
-      { name: 'Grafana / Logs', frequency: 'Frequente' },
     ],
   },
 ];
@@ -266,33 +220,6 @@ export const certificationsData: Certification[] = [
     year: '2022',
     name: 'Docker & Containers em Produção',
     organization: 'Certificação Prática',
-  },
-];
-
-export const principlesData: Principle[] = [
-  {
-    id: 'principle-1',
-    name: 'Simples primeiro',
-    note: 'evitar complexidade precoce',
-    icon: 'star',
-  },
-  {
-    id: 'principle-2',
-    name: 'Medir com dados',
-    note: 'otimizar com números reais',
-    icon: 'activity',
-  },
-  {
-    id: 'principle-3',
-    name: 'Automação total',
-    note: 'repetiu 3x, vira pipeline',
-    icon: 'zap',
-  },
-  {
-    id: 'principle-4',
-    name: 'Segurança por padrão',
-    note: 'em cada camada da API',
-    icon: 'shield',
   },
 ];
 

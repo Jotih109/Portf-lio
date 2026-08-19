@@ -13,28 +13,19 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onNavigateCont
     (proj) => filter === 'all' || proj.category === filter
   );
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const card = e.currentTarget;
-    const rect = card.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    card.style.setProperty('--mouse-x', `${x}px`);
-    card.style.setProperty('--mouse-y', `${y}px`);
-  };
-
   return (
     <section className="projects-section" id="projects">
       <div className="projects-head">
         <div>
           <div className="section-label reveal in">Destaques</div>
-          <h2 className="section-title reveal in" style={{ transitionDelay: '.08s' }}>
+          <h2 className="section-title reveal in" style={{ animationDelay: '.08s' }}>
             PROJETOS<br />
             EM <em>produção</em>
           </h2>
         </div>
         <div
           className="projects-filters reveal in"
-          style={{ transitionDelay: '.16s' }}
+          style={{ animationDelay: '.16s' }}
           role="group"
           aria-label="Filtrar projetos"
         >
@@ -75,7 +66,6 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onNavigateCont
             key={project.id}
             className={`project-card ${project.layout || ''}`}
             data-cat={project.category}
-            onMouseMove={handleMouseMove}
           >
             {/* Visual SVG diagram representation */}
             <div className="pc-visual" aria-hidden="true">

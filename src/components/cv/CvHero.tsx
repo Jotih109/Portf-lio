@@ -42,7 +42,7 @@ export const CvHero: React.FC = () => {
             <h1 className="cv-name reveal in">
               JOÃO <em>LAMIM</em>
             </h1>
-            <p className="cv-role reveal in" style={{ transitionDelay: '.08s' }}>
+            <p className="cv-role reveal in" style={{ animationDelay: '.08s' }}>
               {personalInfo.role}
             </p>
           </div>
@@ -86,7 +86,7 @@ export const CvHero: React.FC = () => {
       </div>
 
       {/* Resumo profissional */}
-      <div className="cv-summary reveal in" style={{ transitionDelay: '.2s' }}>
+      <div className="cv-summary reveal in" style={{ animationDelay: '.2s' }}>
         <div className="section-label">Resumo</div>
         <p>{personalInfo.executiveSummary}</p>
       </div>

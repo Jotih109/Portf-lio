@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 interface TechItem {
   name: string;
-  category: string;
   accentColor?: string;
   icon: React.ReactNode;
 }
@@ -10,7 +9,6 @@ interface TechItem {
 const TECH_LIST: TechItem[] = [
   {
     name: 'JavaScript',
-    category: 'Linguagem',
     accentColor: '#F7DF1E',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -24,7 +22,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'TypeScript',
-    category: 'Linguagem',
     accentColor: '#3178C6',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -38,7 +35,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Node.js',
-    category: 'Runtime',
     accentColor: '#5FA04E',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -53,7 +49,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Python',
-    category: 'Linguagem',
     accentColor: '#3776AB',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -70,7 +65,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'C',
-    category: 'Linguagem',
     accentColor: '#659AD2',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -85,7 +79,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Azure',
-    category: 'Cloud',
     accentColor: '#0078D4',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -97,7 +90,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'SQL',
-    category: 'Database',
     accentColor: '#4169E1',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -113,7 +105,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'GitHub',
-    category: 'DevOps',
     accentColor: '#FFFFFF',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
@@ -123,7 +114,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Power BI',
-    category: 'Analytics',
     accentColor: '#F2C811',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -135,7 +125,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Docker',
-    category: 'Containers',
     accentColor: '#2496ED',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -156,7 +145,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'AWS',
-    category: 'Cloud',
     accentColor: '#FF9900',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -170,7 +158,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Redis',
-    category: 'Cache',
     accentColor: '#DC382D',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -182,7 +169,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'React',
-    category: 'Front-end',
     accentColor: '#61DAFB',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -195,7 +181,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'NestJS',
-    category: 'Framework',
     accentColor: '#E0234E',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -208,7 +193,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'GraphQL',
-    category: 'API',
     accentColor: '#E10098',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -225,7 +209,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Linux',
-    category: 'OS / Infra',
     accentColor: '#FCC624',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -242,7 +225,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'TailwindCSS',
-    category: 'Estilização',
     accentColor: '#06B6D4',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -255,7 +237,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Next.js',
-    category: 'Framework',
     accentColor: '#FFFFFF',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -266,7 +247,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'Git',
-    category: 'Versionamento',
     accentColor: '#F05032',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -289,7 +269,6 @@ const TECH_LIST: TechItem[] = [
   },
   {
     name: 'MongoDB',
-    category: 'Database',
     accentColor: '#47A248',
     icon: (
       <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
@@ -310,22 +289,10 @@ const TECH_LIST: TechItem[] = [
 ];
 
 export const TechCarousel: React.FC = () => {
-  const [isPaused, setIsPaused] = useState(false);
-
   return (
-    <section
-      className="tech-carousel-section"
-      aria-label="Tecnologias e ferramentas"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
-      onTouchStart={() => setIsPaused(true)}
-      onTouchEnd={() => setIsPaused(false)}
-    >
+    <section className="tech-carousel-section" aria-label="Tecnologias e ferramentas">
       <div className="tech-carousel-mask">
-        <div
-          className={`tech-carousel-track ${isPaused ? 'paused' : ''}`}
-          style={{ animationPlayState: isPaused ? 'paused' : undefined }}
-        >
+        <div className="tech-carousel-track">
           {/* First loop */}
           {TECH_LIST.map((tech, idx) => (
             <div
@@ -335,7 +302,6 @@ export const TechCarousel: React.FC = () => {
             >
               <div className="tech-badge-icon">{tech.icon}</div>
               <span className="tech-badge-name">{tech.name}</span>
-              <span className="tech-badge-category">{tech.category}</span>
             </div>
           ))}
 
@@ -349,7 +315,6 @@ export const TechCarousel: React.FC = () => {
             >
               <div className="tech-badge-icon">{tech.icon}</div>
               <span className="tech-badge-name">{tech.name}</span>
-              <span className="tech-badge-category">{tech.category}</span>
             </div>
           ))}
         </div>

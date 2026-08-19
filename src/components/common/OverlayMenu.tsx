@@ -1,4 +1,5 @@
 import React from 'react';
+import { scrollToTarget } from '../../utils/scroll';
 
 interface OverlayMenuProps {
   isOpen: boolean;
@@ -21,12 +22,7 @@ export const OverlayMenu: React.FC<OverlayMenuProps> = ({
 }) => {
   const handleNav = (targetId: string) => {
     onClose();
-    const el = document.getElementById(targetId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    scrollToTarget(targetId);
   };
 
   return (

@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { personalInfo } from '../../data/portfolioData';
+import { scrollToTarget } from '../../utils/scroll';
 
 const FOOTER_LINKS = [
   { id: 'cv', label: 'Início' },
@@ -12,14 +13,7 @@ const FOOTER_LINKS = [
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const handleNav = (targetId: string) => {
-    const el = document.getElementById(targetId);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
+  const handleNav = (targetId: string) => scrollToTarget(targetId);
 
   return (
     <footer>

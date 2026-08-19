@@ -23,6 +23,8 @@ import { ProjectsSection } from './components/home/ProjectsSection';
 import { FaqSection } from './components/home/FaqSection';
 import { ContactSection } from './components/home/ContactSection';
 
+import { registerLenis, scrollToTarget } from './utils/scroll';
+
 export const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
@@ -33,7 +35,7 @@ export const App: React.FC = () => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const lenis = new Lenis({
-      duration: 1.15,
+      duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
@@ -44,11 +46,38 @@ export const App: React.FC = () => {
     };
 
     const animId = requestAnimationFrame(raf);
+    registerLenis(lenis);
 
     return () => {
       cancelAnimationFrame(animId);
+      registerLenis(null);
       lenis.destroy();
     };
+  }, []);
+
+  // Scroll Reveal Animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+          }
+        });
+      },
+      {
+        threshold: 0.08,
+        rootMargin: '0px 0px -30px 0px',
+      }
+    );
+
+    const revealElements = document.querySelectorAll(
+      '.reveal, .reveal-l, .reveal-r, .stagger, .cv-entry, .cert-card, .project-card, .skill-bars'
+    );
+
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
   }, []);
 
   const handleCopyEmail = (email: string) => {
@@ -76,14 +105,7 @@ export const App: React.FC = () => {
     }
   };
 
-  const scrollToSection = (sectionId?: string) => {
-    if (sectionId) {
-      const el = document.getElementById(sectionId);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
+  const scrollToSection = (sectionId?: string) => scrollToTarget(sectionId);
 
   return (
     <div className="portfolio-app">

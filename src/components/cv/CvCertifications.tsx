@@ -5,7 +5,7 @@ export const CvCertifications: React.FC = () => {
   return (
     <section className="cv-section alt" id="certs">
       <div className="section-label reveal in">Qualificações</div>
-      <h2 className="section-title reveal in" style={{ transitionDelay: '.08s' }}>
+      <h2 className="section-title reveal in" style={{ animationDelay: '.08s' }}>
         CERTIFICAÇÕES
       </h2>
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { personalInfo } from '../../data/portfolioData';
+import { scrollToTarget } from '../../utils/scroll';
 
 interface NavbarProps {
   isMenuOpen: boolean;
@@ -46,8 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    const el = document.getElementById(targetId);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    scrollToTarget(targetId);
   };
 
   return (
@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         href="#cv"
         onClick={(e) => {
           e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          scrollToTarget();
         }}
       >
         <b>{personalInfo.initials}</b>
@@ -83,8 +83,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           href="#contact"
           onClick={(e) => {
             e.preventDefault();
-            const el = document.getElementById('contact');
-            if (el) el.scrollIntoView({ behavior: 'smooth' });
+            scrollToTarget('contact');
           }}
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">

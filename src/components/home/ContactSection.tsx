@@ -10,11 +10,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onCopyEmail }) =
     <section className="cta-section" id="contact">
       <div className="cta-bg" aria-hidden="true" />
       <p className="cta-sub reveal in">Vamos conversar</p>
-      <h2 className="cta-headline reveal in" style={{ transitionDelay: '.08s' }}>
+      <h2 className="cta-headline reveal in" style={{ animationDelay: '.08s' }}>
         SE <em>INTERESSOU?</em><br />
         ENTRE EM CONTATO
       </h2>
-      <div className="cta-actions reveal in" style={{ transitionDelay: '.16s' }}>
+      <div className="cta-actions reveal in" style={{ animationDelay: '.16s' }}>
         <a className="btn-primary" href={`mailto:${personalInfo.email}`}>
           {personalInfo.email}
           <svg
