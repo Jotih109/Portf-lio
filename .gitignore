@@ -1,1 +1,4 @@
 node_modules/
+
+# artefatos de build
+*.tsbuildinfo
