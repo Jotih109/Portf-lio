@@ -43,12 +43,6 @@ export interface Education {
   description?: string;
 }
 
-export interface Certification {
-  year: string;
-  name: string;
-  organization: string;
-}
-
 export interface FaqItem {
   id: string;
   question: string;

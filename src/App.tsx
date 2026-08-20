@@ -15,7 +15,6 @@ import { Marquee } from './components/common/Marquee';
 import { CvHero } from './components/cv/CvHero';
 import { CvExperience } from './components/cv/CvExperience';
 import { CvEducation } from './components/cv/CvEducation';
-import { CvCertifications } from './components/cv/CvCertifications';
 import { CvSkills } from './components/cv/CvSkills';
 
 import { TechCarousel } from './components/common/TechCarousel';
@@ -140,7 +139,6 @@ export const App: React.FC = () => {
         <TechCarousel />
         <CvExperience />
         <CvEducation />
-        <CvCertifications />
         <CvSkills />
         <ProjectsSection onNavigateContact={() => scrollToSection('contact')} />
         <Marquee />

@@ -10,7 +10,6 @@ const MENU_LINKS = [
   { id: 'cv', label: 'Início' },
   { id: 'experience', label: 'Experiência' },
   { id: 'education', label: 'Formação' },
-  { id: 'certs', label: 'Certificações' },
   { id: 'skills', label: 'Habilidades' },
   { id: 'projects', label: 'Projetos' },
   { id: 'faq', label: 'Perguntas Frequentes' },

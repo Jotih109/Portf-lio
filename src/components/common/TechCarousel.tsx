@@ -194,7 +194,12 @@ const BADGES: Badge[] = ORDER.map((name) => {
 });
 
 const TechBadge: React.FC<{ badge: Badge; duplicate?: boolean }> = ({ badge, duplicate }) => (
-  <div className="tech-badge" aria-hidden={duplicate || undefined}>
+  <div
+    className="tech-badge"
+    aria-hidden={duplicate || undefined}
+    // --brand alimenta o hover no CSS: cada pill acende na cor da propria marca
+    style={{ '--brand': badge.color } as React.CSSProperties}
+  >
     <div className="tech-badge-icon" style={{ color: badge.color }}>
       <svg viewBox={badge.viewBox} width="20" height="20" aria-hidden="true">
         {badge.glyph}

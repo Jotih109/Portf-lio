@@ -3,7 +3,6 @@
   Experience,
   SkillBar,
   Education,
-  Certification,
   FaqItem,
 } from '../types';
 
@@ -194,29 +193,6 @@ export const educationData: Education[] = [
     period: '2021 — 2023',
     degree: 'Curso de Programação para Internet',
     institution: 'OneBitCode · Concluído',
-  },
-];
-
-export const certificationsData: Certification[] = [
-  {
-    year: '2025',
-    name: 'AWS Certified Developer — Associate',
-    organization: 'Amazon Web Services',
-  },
-  {
-    year: '2024',
-    name: 'Arquitetura de Microsserviços & Mensageria',
-    organization: 'Especialização Técnica',
-  },
-  {
-    year: '2023',
-    name: 'SQL: Tuning & Performance',
-    organization: 'Curso Avançado',
-  },
-  {
-    year: '2022',
-    name: 'Docker & Containers em Produção',
-    organization: 'Certificação Prática',
   },
 ];
 

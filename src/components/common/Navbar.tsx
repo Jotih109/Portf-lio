@@ -23,9 +23,9 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
+      setIsScrolled(window.scrollY > 8);
 
-      const sections = ['experience', 'education', 'certs', 'skills', 'projects', 'faq', 'contact'];
+      const sections = ['experience', 'education', 'skills', 'projects', 'faq', 'contact'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
