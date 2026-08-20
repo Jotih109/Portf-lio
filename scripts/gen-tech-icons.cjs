@@ -7,16 +7,11 @@ const MAP = [
   ['TypeScript',  'typescript'],
   ['Node.js',     'nodedotjs'],
   ['Python',      'python'],
-  ['C',           'c'],
-  ['PostgreSQL',  'postgresql'],
   ['GitHub',      'github'],
   ['Docker',      'docker'],
-  ['Redis',       'redis'],
   ['React',       'react'],
   ['NestJS',      'nestjs'],
-  ['GraphQL',     'graphql'],
   ['Linux',       'linux'],
-  ['TailwindCSS', 'tailwindcss'],
   ['Next.js',     'nextdotjs'],
   ['Git',         'git'],
   ['MongoDB',     'mongodb'],
@@ -53,9 +48,9 @@ fs.writeFileSync('src/data/techIcons.ts',
  * GERADO — nao editar a mao. Para atualizar:
  *   node scripts/gen-tech-icons.cjs
  *
- * Azure, Power BI e AWS nao estao aqui: o Simple Icons removeu os icones
- * da Microsoft e da Amazon a pedido dos detentores da marca, entao esses
- * tres seguem como SVG proprio dentro do TechCarousel.
+ * Azure, Power BI, AWS, C# e SQL nao estao aqui: o Simple Icons removeu os icones
+ * da Microsoft e da Amazon a pedido dos detentores da marca, e SQL nao e
+ * um produto — todos seguem como SVG proprio dentro do TechCarousel.
  */
 export interface TechIcon {
   name: string;

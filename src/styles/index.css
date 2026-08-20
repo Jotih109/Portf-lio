@@ -396,7 +396,7 @@ header.scrolled {
   align-items: baseline;
   gap: .55rem;
   font-family: 'Bebas Neue';
-  font-size: 1.35rem;
+  font-size: 1.40rem;
   letter-spacing: .12em;
 }
 
@@ -407,7 +407,7 @@ header.scrolled {
 
 .logo span {
   font-family: var(--mono);
-  font-size: .6rem;
+  font-size: 1.4rem;
   letter-spacing: .18em;
   color: var(--ink-3);
   text-transform: uppercase;
@@ -737,6 +737,7 @@ header.scrolled {
 .tech-badge {
   display: inline-flex;
   align-items: center;
+  text-align: center;
   gap: 0.65rem;
   padding: 0.55rem 1.15rem;
   background: rgba(255, 255, 255, 0.028);
@@ -753,7 +754,7 @@ header.scrolled {
 .tech-badge:hover {
   background: rgba(255, 255, 255, 0.07);
   border-color: rgba(255, 176, 32, 0.55);
-  transform: translateY(-2px) scale(1.03);
+  transform: translateY(-2px) scale(0.90);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 176, 32, 0.14);
 }
 
