@@ -154,23 +154,32 @@ export const experiencesData: Experience[] = [
 ];
 
 export const skillBarsData: SkillBar[] = [
-  { name: 'TypeScript / JavaScript', level: 92, label: 'Avançado' },
-  { name: 'Node.js / Express / NestJS', level: 90, label: 'Avançado' },
-  { name: 'SQL / Modelagem de dados', level: 88, label: 'Avançado' },
-  { name: 'Docker / AWS / CI/CD', level: 80, label: 'Intermediário+' },
-  { name: 'Python / FastAPI', level: 75, label: 'Intermediário+' },
-  { name: 'React / Next.js', level: 72, label: 'Intermediário' },
+  { name: 'C# / JavaScript / Python', level: 54, label: 'Intermediário+' },
+  { name: 'Node.js / Express / SQL', level: 50, label: 'Intermediário+' },
+  { name: 'Azure / MongoDB / C++', level: 45, label: 'Intermediário' },
+  { name: 'Docker / AWS / React / Next.js', level: 42, label: 'Intermediário+' },
+  { name: 'Git', level: 40, label: 'Intermediário' },
 ];
 
 export const ecosystemTags = [
+  'JavaScript',
+  'TypeScript',
+  'Node.js',
+  'Python',
+  'C#',
+  'C++',
+  'Azure',
+  'SQL',
+  'GitHub',
+  'Power BI',
+  'Docker',
+  'AWS',
+  'React',
   'NestJS',
-  'FastAPI',
-  'Prisma',
-  'Vitest',
-  'Jest',
-  'Terraform',
-  'Grafana',
+  'Linux',
+  'Next.js',
   'Git',
+  'MongoDB',
 ];
 
 export const languages = [

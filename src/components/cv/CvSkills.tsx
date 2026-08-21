@@ -7,7 +7,7 @@ export const CvSkills: React.FC = () => {
       <div className="section-label reveal in">Competências</div>
       <h2 className="section-title reveal in" style={{ animationDelay: '.08s' }}>
         HABILIDADES<br />
-        <em>técnicas</em>
+        <em style={{ "fontSize": "0.88em" }}>TÉCNICAS</em>
       </h2>
 
       <div className="skills-layout">
