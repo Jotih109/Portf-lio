@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 import confetti from 'canvas-confetti';
 
 import { CustomCursor } from './components/common/CustomCursor';
+import { InteractivePet } from './components/common/InteractivePet';
 import { Preloader } from './components/common/Preloader';
 import { ScrollProgress } from './components/common/ScrollProgress';
 import { BackToTop } from './components/common/BackToTop';
@@ -121,6 +122,9 @@ export const App: React.FC = () => {
       {/* Scroll Progress & Back to Top */}
       <ScrollProgress />
       <BackToTop />
+
+      {/* Mascote Interativo estilo Kinect */}
+      <InteractivePet />
 
       {/* Navigation & Fullscreen Overlay Menu */}
       <Navbar
