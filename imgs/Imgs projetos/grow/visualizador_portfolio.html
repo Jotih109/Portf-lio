@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Telas — Grow Business (Portfólio)</title>
+    <link rel="icon" type="image/png" href="../view/icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b916edb840.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --bg: #0d1310;
+            --card-bg: #15221c;
+            --card-border: #23372c;
+            --accent: #2e8b57;
+            --accent-light: #4ade80;
+            --text-main: #f0fdf4;
+            --text-muted: #94a3b8;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        header {
+            background: linear-gradient(180deg, #112017 0%, #0d1310 100%);
+            border-bottom: 1px solid var(--card-border);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        .badge-header {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(74, 222, 128, 0.1);
+            color: var(--accent-light);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.02em;
+        }
+
+        h1 span {
+            color: var(--accent-light);
+        }
+
+        p.sub {
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Tabs */
+        .filtros-abas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 32px 0;
+        }
+
+        .btn-aba {
+            background: #182820;
+            color: #cbd5e1;
+            border: 1px solid var(--card-border);
+            padding: 10px 18px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-aba:hover, .btn-aba.ativo {
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent-light);
+            box-shadow: 0 4px 16px rgba(46, 139, 87, 0.3);
+            transform: translateY(-1px);
+        }
+
+        /* Grid */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 28px;
+        }
+
+        .card-print {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-print:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-light);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .img-wrapper {
+            position: relative;
+            background: #090e0c;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-in;
+            height: 240px;
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            transition: transform 0.3s ease;
+        }
+
+        .card-print:hover .img-wrapper img {
+            transform: scale(1.03);
+        }
+
+        .categoria-tag {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(13, 19, 16, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .card-conteudo {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .card-conteudo h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .card-conteudo p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .card-rodape {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 14px;
+            font-size: 0.82rem;
+            color: #64748b;
+        }
+
+        .card-rodape a {
+            color: var(--accent-light);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-rodape a:hover {
+            text-decoration: underline;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(5, 10, 8, 0.92);
+            backdrop-filter: blur(12px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 24px;
+        }
+
+        .lightbox.ativo {
+            display: flex;
+        }
+
+        .lightbox-corpo {
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .lightbox-corpo img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+            border: 1px solid var(--card-border);
+        }
+
+        .lightbox-info {
+            margin-top: 14px;
+            text-align: center;
+        }
+
+        .lightbox-info h3 {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .lightbox-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .lightbox-fechar {
+            position: absolute;
+            top: -48px;
+            right: 0;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="badge-header">
+            <i class="fa-solid fa-camera-retro"></i> Galeria Oficial para Portfólio
+        </div>
+        <h1>Plataforma <span>Grow Business</span></h1>
+        <p class="sub">
+            Coleção completa de capturas de tela em alta definição do projeto full stack <strong>Grow Business</strong> — Sistema de empregabilidade e inclusão social.
+        </p>
+    </header>
+
+    <div class="container">
+        <div class="filtros-abas" id="filtros">
+            <button class="btn-aba ativo" data-categoria="todos">Todos os Prints (<span id="totalContador">0</span>)</button>
+            <button class="btn-aba" data-categoria="destaque">🌟 Destaques</button>
+            <button class="btn-aba" data-categoria="institucional">🌐 Institucional</button>
+            <button class="btn-aba" data-categoria="autenticacao">🔐 Autenticação</button>
+            <button class="btn-aba" data-categoria="candidato">👤 Candidato</button>
+            <button class="btn-aba" data-categoria="empresa">🏢 Empresa (B2B)</button>
+            <button class="btn-aba" data-categoria="mobile">📱 Mobile</button>
+        </div>
+
+        <div class="grid-cards" id="galeria"></div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="fecharLightbox(event)">
+        <div class="lightbox-corpo">
+            <button class="lightbox-fechar" onclick="fecharLightbox(event)"><i class="fa-solid fa-xmark"></i></button>
+            <img id="lightboxImg" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitulo"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const prints = [
+            // Destaques
+            {
+                categoria: 'destaque',
+                titulo: 'Banner Principal (Hero Landing Page)',
+                desc: 'Apresentação visual com a proposta de valor da plataforma e chamada para ação rápida.',
+                src: '00_destaques_portfolio/destaque_01_hero_home.png',
+                tag: 'Destaque'
+            },
+            {
+                categoria: 'destaque',
+                titulo: 'Feed Principal de Vagas',
+                desc: 'Feed de vagas com cartões detalhados, remuneração em destaque, jornada, local e filtros.',
+                src: '00_destaques_portfolio/destaque_02_feed_vagas.png',
+                tag: 'Destaque'
+            },
+            {
+                categoria: 'destaque',
+                titulo: 'Modal Detalhado da Vaga',
+                desc: 'Modal com descrição rica da vaga, benefícios, dados da empresa e ação de candidatura.',
+                src: '00_destaques_portfolio/destaque_03_modal_vaga.png',
+                tag: 'Destaque'
+            },
+            {
+                categoria: 'destaque',
+                titulo: 'Painel Corporativo da Empresa',
+                desc: 'Gestão B2B com vagas ativas publicadas, métricas e botão de criação de novas oportunidades.',
+                src: '00_destaques_portfolio/destaque_04_painel_empresa.png',
+                tag: 'Destaque'
+            },
+            {
+                categoria: 'destaque',
+                titulo: 'Gestão e Triagem de Candidatos',
+                desc: 'Lista de profissionais inscritos em cada vaga com ação direta de contratação.',
+                src: '00_destaques_portfolio/destaque_05_gestao_candidatos.png',
+                tag: 'Destaque'
+            },
+
+            // Institucional
+            {
+                categoria: 'institucional',
+                titulo: 'Hero Section Desktop',
+                desc: 'Topo da landing page com identidade visual, slogan e botões de acesso.',
+                src: '01_institucional/01_home_hero_desktop.png',
+                tag: 'Institucional'
+            },
+            {
+                categoria: 'institucional',
+                titulo: 'Propósito & Inclusão Social',
+                desc: 'Seção explicando o impacto e a missão de conectar pessoas sem escolaridade formal.',
+                src: '01_institucional/02_home_proposito_inclusao.png',
+                tag: 'Institucional'
+            },
+            {
+                categoria: 'institucional',
+                titulo: 'Serviços e Funcionalidades',
+                desc: 'Vantagens para candidatos e pequenas empresas locais.',
+                src: '01_institucional/03_home_servicos_funcionalidades.png',
+                tag: 'Institucional'
+            },
+            {
+                categoria: 'institucional',
+                titulo: 'Landing Page Completa (Full Page)',
+                desc: 'Visão integral de toda a página inicial de ponta a ponta.',
+                src: '01_institucional/04_home_completa_fullpage.png',
+                tag: 'Institucional'
+            },
+            {
+                categoria: 'institucional',
+                titulo: 'Página Sobre Nós',
+                desc: 'História da iniciativa, valores e equipe de desenvolvimento.',
+                src: '01_institucional/05_sobre_nos_about.png',
+                tag: 'Institucional'
+            },
+            {
+                categoria: 'institucional',
+                titulo: 'Página de Serviços',
+                desc: 'Detalhamento do modelo de negócio e serviços oferecidos.',
+                src: '01_institucional/06_servicos_detalhados.png',
+                tag: 'Institucional'
+            },
+
+            // Autenticação
+            {
+                categoria: 'autenticacao',
+                titulo: 'Tela de Login com Modo Demonstração',
+                desc: 'Formulário de acesso com opção de login ou navegação instantânea de demonstração.',
+                src: '02_autenticacao_e_cadastro/01_tela_login.png',
+                tag: 'Autenticação'
+            },
+            {
+                categoria: 'autenticacao',
+                titulo: 'Recuperação de Senha',
+                desc: 'Fluxo de solicitação de código e redefinição de credenciais.',
+                src: '02_autenticacao_e_cadastro/02_recuperacao_senha.png',
+                tag: 'Autenticação'
+            },
+            {
+                categoria: 'autenticacao',
+                titulo: 'Cadastro de Candidato (Pessoa Física)',
+                desc: 'Formulário com validação de dados pessoais, escolaridade e contato.',
+                src: '02_autenticacao_e_cadastro/03_cadastro_candidato.png',
+                tag: 'Autenticação'
+            },
+            {
+                categoria: 'autenticacao',
+                titulo: 'Cadastro de Empresa (Pessoa Jurídica)',
+                desc: 'Formulário de cadastro com CNPJ, razão social e descrição institucional.',
+                src: '02_autenticacao_e_cadastro/04_cadastro_empresa.png',
+                tag: 'Autenticação'
+            },
+            {
+                categoria: 'autenticacao',
+                titulo: 'Termos de Uso e Privacidade',
+                desc: 'Página com regras de conformidade e consentimento do usuário.',
+                src: '02_autenticacao_e_cadastro/05_termos_de_uso.png',
+                tag: 'Autenticação'
+            },
+
+            // Candidato
+            {
+                categoria: 'candidato',
+                titulo: 'Feed de Vagas Abertas',
+                desc: 'Painel principal com listagem de todas as vagas abertas pelas empresas parceiras.',
+                src: '03_experiencia_candidato/01_feed_vagas_candidato.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Busca em Tempo Real e Filtros',
+                desc: 'Filtragem simultânea por cargo, cidade, empresa e ordenação de salário.',
+                src: '03_experiencia_candidato/02_busca_e_filtros_vagas.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Modal de Detalhes da Vaga',
+                desc: 'Visão aprofundada com requisitos e botão de candidatura.',
+                src: '03_experiencia_candidato/03_modal_detalhes_vaga.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Interação de Favoritar Vaga',
+                desc: 'Salvar oportunidades de interesse para consulta rápida posterior.',
+                src: '03_experiencia_candidato/04_vaga_favoritada_interacao.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Painel Minhas Candidaturas',
+                desc: 'Acompanhamento em tempo real de todas as inscrições efetuadas pelo candidato.',
+                src: '03_experiencia_candidato/05_minhas_candidaturas.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Vagas Salvas / Favoritas',
+                desc: 'Lista exclusiva com as vagas favoritadas pelo usuário.',
+                src: '03_experiencia_candidato/06_vagas_salvas_favoritos.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Mural Comunitário de Postagens',
+                desc: 'Espaço onde candidatos publicam cursos concluídos e disponibilidade.',
+                src: '03_experiencia_candidato/07_mural_comunitario_posts.png',
+                tag: 'Candidato'
+            },
+            {
+                categoria: 'candidato',
+                titulo: 'Edição de Perfil do Candidato',
+                desc: 'Gerenciamento dos dados cadastrais, endereço e biografia.',
+                src: '03_experiencia_candidato/08_perfil_candidato_edicao.png',
+                tag: 'Candidato'
+            },
+
+            // Empresa
+            {
+                categoria: 'empresa',
+                titulo: 'Painel Minhas Vagas da Empresa',
+                desc: 'Visualização de todas as oportunidades anunciadas pela organização parceira.',
+                src: '04_experiencia_empresa/01_painel_empresa_minhas_vagas.png',
+                tag: 'Empresa'
+            },
+            {
+                categoria: 'empresa',
+                titulo: 'Formulário de Publicação de Vaga',
+                desc: 'Interface de criação de vaga com cargo, remuneração, carga e descrição.',
+                src: '04_experiencia_empresa/02_formulario_publicar_vaga.png',
+                tag: 'Empresa'
+            },
+            {
+                categoria: 'empresa',
+                titulo: 'Gestão e Triagem de Candidatos',
+                desc: 'Visualização dos inscritos em cada vaga com opção de contratação e envio de e-mail.',
+                src: '04_experiencia_empresa/03_gestao_candidatos_triagem.png',
+                tag: 'Empresa'
+            },
+            {
+                categoria: 'empresa',
+                titulo: 'Perfil Corporativo da Empresa',
+                desc: 'Atualização de informações institucionais e foto da empresa.',
+                src: '04_experiencia_empresa/04_perfil_empresa_edicao.png',
+                tag: 'Empresa'
+            },
+
+            // Mobile
+            {
+                categoria: 'mobile',
+                titulo: 'Landing Page no Mobile',
+                desc: 'Adaptação responsiva com menu colapsado e layout fluido para telas pequenas.',
+                src: '05_responsividade_mobile/01_mobile_home_hero.png',
+                tag: 'Mobile'
+            },
+            {
+                categoria: 'mobile',
+                titulo: 'Login Mobile',
+                desc: 'Formulário de autenticação adaptado para interação por toque.',
+                src: '05_responsividade_mobile/02_mobile_login.png',
+                tag: 'Mobile'
+            },
+            {
+                categoria: 'mobile',
+                titulo: 'Feed de Vagas no Celular',
+                desc: 'Experiência fluida e nativa de busca e navegação de vagas em smartphones.',
+                src: '05_responsividade_mobile/03_mobile_feed_vagas.png',
+                tag: 'Mobile'
+            },
+            {
+                categoria: 'mobile',
+                titulo: 'Modal de Detalhes no Mobile',
+                desc: 'Modal otimizado com botões de ação acessíveis ao alcance dos polegares.',
+                src: '05_responsividade_mobile/04_mobile_modal_vaga.png',
+                tag: 'Mobile'
+            },
+            {
+                categoria: 'mobile',
+                titulo: 'Painel da Empresa no Celular',
+                desc: 'Gestão corporativa e acompanhamento de vagas na palma da mão.',
+                src: '05_responsividade_mobile/05_mobile_painel_empresa.png',
+                tag: 'Mobile'
+            }
+        ];
+
+        document.getElementById('totalContador').textContent = prints.length;
+
+        function renderGaleria(categoria = 'todos') {
+            const galeria = document.getElementById('galeria');
+            const filtrados = categoria === 'todos' ? prints : prints.filter(p => p.categoria === categoria);
+            
+            galeria.innerHTML = filtrados.map(p => `
+                <div class="card-print">
+                    <div class="img-wrapper" onclick="abrirLightbox('${p.src}', '${p.titulo}', '${p.desc}')">
+                        <span class="categoria-tag">${p.tag}</span>
+                        <img src="${p.src}" alt="${p.titulo}" loading="lazy">
+                    </div>
+                    <div class="card-conteudo">
+                        <h3>${p.titulo}</h3>
+                        <p>${p.desc}</p>
+                        <div class="card-rodape">
+                            <span>HD • 2x DPR</span>
+                            <a href="${p.src}" target="_blank" download><i class="fa-solid fa-download"></i> Baixar</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Eventos das abas
+        document.querySelectorAll('.btn-aba').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.btn-aba').forEach(b => b.classList.remove('ativo'));
+                btn.classList.add('ativo');
+                renderGaleria(btn.dataset.categoria);
+            });
+        });
+
+        // Lightbox
+        function abrirLightbox(src, titulo, desc) {
+            const lb = document.getElementById('lightbox');
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxTitulo').textContent = titulo;
+            document.getElementById('lightboxDesc').textContent = desc;
+            lb.classList.add('ativo');
+        }
+
+        function fecharLightbox(e) {
+            if (e.target.id === 'lightbox' || e.target.closest('.lightbox-fechar')) {
+                document.getElementById('lightbox').classList.remove('ativo');
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.getElementById('lightbox').classList.remove('ativo');
+            }
+        });
+
+        renderGaleria();
+    </script>
+</body>
+
+</html>
