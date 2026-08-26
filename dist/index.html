@@ -28,7 +28,7 @@
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
     rel="stylesheet" />
 
-  <!-- Estilos Principais -->
+  <!-- Estilos Principais -->
 
   <script type="application/ld+json">
   {
@@ -41,8 +41,8 @@
     "url": "https://joaolamim.dev/"
   }
   </script>
-  <script type="module" crossorigin src="/assets/index-DQkM3xjK.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DMyhCFoT.css">
+  <script type="module" crossorigin src="/assets/index-CP1Es-j2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DhMCOT-L.css">
 </head>
 
 <body>
@@ -819,7 +819,7 @@
       <section class="projects-section" id="projects">
         <div class="projects-head">
           <div>
-            <div class="section-label reveal in">Destaques</div>
+            <div class="section-label reveal in">Destaques &amp; Produção</div>
             <h2 class="section-title reveal in" style="animation-delay: .08s;">
               PROJETOS<br />
             </h2>
@@ -827,154 +827,310 @@
 
           <div class="projects-filters reveal in" style="animation-delay: .16s;" role="group"
             aria-label="Filtrar projetos">
-            <button class="filter-btn active" type="button" data-filter="all">Todos</button>
-            <button class="filter-btn" type="button" data-filter="backend">Back-end</button>
-            <button class="filter-btn" type="button" data-filter="frontend">Front-end</button>
-            <button class="filter-btn" type="button" data-filter="infra">Infra</button>
+            <button class="filter-btn active" type="button" data-filter="all">Todos (8)</button>
+            <button class="filter-btn" type="button" data-filter="backend">Back-end &amp; Dados</button>
+            <button class="filter-btn" type="button" data-filter="frontend">Front-end &amp; UI</button>
+            <button class="filter-btn" type="button" data-filter="fullstack">Full-Stack</button>
           </div>
         </div>
 
         <div class="projects-grid">
-          <!-- Projeto 01: Gateway -->
-          <article class="project-card wide" data-cat="backend">
+          <!-- Projeto 01: ApexView -->
+          <article class="project-card wide" data-cat="backend" data-proj="ac_telemetria">
             <div class="pc-visual" aria-hidden="true">
-              <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <linearGradient id="pv1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#1E1400" />
-                    <stop offset="100%" stop-color="#0A0A0B" />
-                  </linearGradient>
-                </defs>
-                <rect width="600" height="400" fill="url(#pv1)" />
-                <g stroke="rgba(255,176,32,.35)" fill="none" stroke-width="1.2">
-                  <circle cx="300" cy="200" r="60" />
-                  <circle cx="150" cy="120" r="26" />
-                  <circle cx="470" cy="130" r="26" />
-                  <circle cx="140" cy="300" r="26" />
-                  <circle cx="460" cy="300" r="26" />
-                  <path d="M176 132 L245 178 M444 142 L356 180 M166 288 L248 226 M434 288 L356 228" />
-                </g>
-              </svg>
+              <img src="/assets/01_Dashboard_Geral_AoVivo-CdXHCtup.png"
+                alt="ApexView - Dashboard ao Vivo" loading="lazy" />
             </div>
             <span class="pc-index">01</span>
             <div class="pc-body">
-              <div class="pc-type">Back-end · Arquitetura</div>
-              <h3 class="pc-title">Gateway de Integrações Resiliente</h3>
-              <p class="pc-desc">Camada de APIs que unifica múltiplos provedores externos com retry inteligente, rate
-                limit adaptativo, filas assíncronas e observabilidade completa.</p>
-              <span class="pc-metric">p95: 180ms · 99,99% uptime</span>
+              <div class="pc-badges-row">
+                <span class="pc-type">Back-end · Desktop &amp; IA</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 8 Telas</span>
+              </div>
+              <h3 class="pc-title">ApexView — Telemetria &amp; Engenheiro de Pista IA</h3>
+              <p class="pc-desc">Dashboard de telemetria em tempo real para simuladores (Assetto Corsa) inspirado no
+                MoTeC i2 Pro. Conexão direta a 60 Hz via memória compartilhada (IPC Windows), telemetria curva a curva,
+                cálculo de deltas dinâmicos e engenheiro de pista inteligente com síntese de voz (TTS).</p>
+              <span class="pc-metric">60 Hz Shared Memory · 0 Latência · TTS Neural</span>
               <div class="pc-stack">
-                <span>Node.js</span>
-                <span>TypeScript</span>
-                <span>Docker</span>
-                <span>SQL</span>
+                <span>Python</span>
+                <span>PyQt5</span>
+                <span>PyQtGraph</span>
+                <span>Windows IPC</span>
+                <span>SAPI 5 TTS</span>
+                <span>Spline Math</span>
               </div>
               <div class="pc-links">
-                <a href="#contact">Discutir arquitetura</a>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button type="button" class="btn-open-gallery" data-open-gallery="ac_telemetria">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
-          <!-- Projeto 02: Painel de Métricas -->
-          <article class="project-card tall" data-cat="frontend">
+          <!-- Projeto 02: Doqt Analytics -->
+          <article class="project-card wide" data-cat="fullstack" data-proj="analise_doqt">
             <div class="pc-visual" aria-hidden="true">
-              <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice">
-                <defs>
-                  <linearGradient id="pv2" x1="1" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#141419" />
-                    <stop offset="100%" stop-color="#0A0A0B" />
-                  </linearGradient>
-                </defs>
-                <rect width="600" height="400" fill="url(#pv2)" />
-                <g fill="rgba(255,176,32,.28)">
-                  <rect x="80" y="290" width="46" height="70" rx="3" />
-                  <rect x="150" y="240" width="46" height="120" rx="3" />
-                  <rect x="220" y="180" width="46" height="180" rx="3" />
-                  <rect x="290" y="220" width="46" height="140" rx="3" />
-                  <rect x="360" y="130" width="46" height="230" rx="3" />
-                  <rect x="430" y="90" width="46" height="270" rx="3" />
-                </g>
-                <path d="M100 300 L173 250 L243 195 L313 230 L383 145 L453 105" stroke="rgba(255,176,32,.7)" fill="none"
-                  stroke-width="2" />
-              </svg>
+              <img src="/assets/03_dashboard_overview_dark-uh31SdMD.png"
+                alt="Doqt Analytics - Visão Geral Executiva" loading="lazy" />
             </div>
             <span class="pc-index">02</span>
             <div class="pc-body">
-              <div class="pc-type">Dashboard · Front-end</div>
-              <h3 class="pc-title">Painel de Métricas em Tempo Real</h3>
-              <p class="pc-desc">Interface analítica de alta performance com streaming de dados via WebSocket e
-                renderização instantânea de grandes volumes.</p>
-              <span class="pc-metric">Lighthouse 98 · LCP 1,1s</span>
+              <div class="pc-badges-row">
+                <span class="pc-type">Full-Stack · BI Clínico &amp; IA</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 18 Telas</span>
+              </div>
+              <h3 class="pc-title">Doqt Analytics — Inteligência Clínica &amp; Gestão</h3>
+              <p class="pc-desc">Ecossistema de Business Intelligence e Analytics para clínicas e consultórios médicos.
+                Motor de agregação em memória capaz de processar mais de 15.000 atendimentos em milissegundos com filtros
+                multidimensionais, scorecards médicos individuais, heatmaps temporais e auditoria de faturamento.</p>
+              <span class="pc-metric">+15k Registros/ms · Radar Multivariável · Dark/Light Mode</span>
               <div class="pc-stack">
-                <span>React</span>
+                <span>React 19</span>
                 <span>TypeScript</span>
-                <span>WebSocket</span>
                 <span>Vite</span>
+                <span>Tailwind CSS</span>
+                <span>Recharts</span>
+                <span>Lucide React</span>
               </div>
               <div class="pc-links">
-                <a href="#contact">Ver detalhes</a>
-                <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <button type="button" class="btn-open-gallery" data-open-gallery="analise_doqt">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
-          <!-- Projeto 03: Pipeline Deploy -->
-          <article class="project-card standard" data-cat="infra">
+          <!-- Projeto 03: Chat DOQT -->
+          <article class="project-card standard" data-cat="fullstack" data-proj="chat">
             <div class="pc-visual" aria-hidden="true">
-              <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
-                <rect width="400" height="400" fill="#0F0F12" />
-                <g stroke="rgba(255,176,32,.3)" fill="none" stroke-width="1.4">
-                  <rect x="90" y="80" width="220" height="50" rx="6" />
-                  <rect x="90" y="170" width="220" height="50" rx="6" />
-                  <rect x="90" y="260" width="220" height="50" rx="6" />
-                  <path d="M200 130 L200 170 M200 220 L200 260" />
-                </g>
-              </svg>
+              <img src="/assets/02_chat_grupo_cardiologia-Cgc0lGob.png" alt="Chat DOQT - Mensageria Clínica"
+                loading="lazy" />
             </div>
             <span class="pc-index">03</span>
             <div class="pc-body">
-              <div class="pc-type">Infra · DevOps</div>
-              <h3 class="pc-title">Pipeline de Deploy Automatizado</h3>
-              <p class="pc-desc">Automação de ponta a ponta: build em containers, validação de testes automatizados e
-                deploy sem downtime com rollback.</p>
-              <span class="pc-metric">Deploy: 40min ➔ 6min</span>
+              <div class="pc-badges-row">
+                <span class="pc-type">Full-Stack · Saúde &amp; Realtime</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 13 Telas</span>
+              </div>
+              <h3 class="pc-title">Chat DOQT — Mensageria Hospitalar &amp; Clínica</h3>
+              <p class="pc-desc">Plataforma de comunicação clínica segura em tempo real para hospitais e clínicas.
+                Apresenta recibos de leitura auditáveis por destinatário, fixação temporária de protocolos de emergência
+                com expiração, gravação de áudio com waveform nativa e governança de acessos.</p>
+              <span class="pc-metric">WebSockets Realtime · RLS PostgreSQL · HIPAA/LGPD</span>
               <div class="pc-stack">
-                <span>GitHub Actions</span>
-                <span>Docker</span>
-                <span>AWS</span>
+                <span>React 19</span>
+                <span>TypeScript</span>
+                <span>TanStack Start</span>
+                <span>PostgreSQL</span>
+                <span>Supabase</span>
+                <span>Tailwind CSS</span>
               </div>
               <div class="pc-links">
-                <a href="#contact">Detalhes</a>
+                <button type="button" class="btn-open-gallery" data-open-gallery="chat">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
 
-          <!-- Projeto 04: Pipeline Dados -->
-          <article class="project-card standard" data-cat="backend">
+          <!-- Projeto 04: Go Master -->
+          <article class="project-card standard" data-cat="frontend" data-proj="go">
             <div class="pc-visual" aria-hidden="true">
-              <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
-                <rect width="400" height="400" fill="#12100A" />
-                <g stroke="rgba(255,176,32,.28)" fill="none" stroke-width="1.3">
-                  <ellipse cx="200" cy="120" rx="95" ry="32" />
-                  <path d="M105 120 L105 260 A95 32 0 0 0 295 260 L295 120" />
-                  <path d="M105 190 A95 32 0 0 0 295 190" />
-                </g>
-              </svg>
+              <img src="/assets/01_partida_19x19_kaya-j9nuyM2h.png" alt="Go Master - Tabuleiro 19x19"
+                loading="lazy" />
             </div>
             <span class="pc-index">04</span>
             <div class="pc-body">
-              <div class="pc-type">Dados · Pipeline</div>
-              <h3 class="pc-title">Pipeline de Ingestão de Dados</h3>
-              <p class="pc-desc">Processamento e transformação resiliente de grandes cargas de dados diárias com
-                reprocessamento idempotente.</p>
-              <span class="pc-metric">2M+ registros / dia</span>
+              <div class="pc-badges-row">
+                <span class="pc-type">Front-end · IA &amp; Canvas 2D</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 17 Telas</span>
+              </div>
+              <h3 class="pc-title">Go Master — Plataforma &amp; IA de Baduk (Weiqi)</h3>
+              <p class="pc-desc">Plataforma web completa para o jogo milenar de Go. Motor de IA proprietário com MCTS +
+                RAVE em Web Workers para 60 FPS ininterruptos, mapa de calor de influência territorial em tempo real,
+                modo aprendiz com explicabilidade didática de lances em português e leitor SGF.</p>
+              <span class="pc-metric">MCTS 60 FPS · Web Workers · Union-Find O(1)</span>
               <div class="pc-stack">
-                <span>Python</span>
-                <span>SQL</span>
+                <span>TypeScript</span>
+                <span>HTML5 Canvas</span>
+                <span>Web Workers</span>
+                <span>MCTS + RAVE</span>
+                <span>Union-Find</span>
+                <span>SGF Parser</span>
               </div>
               <div class="pc-links">
-                <a href="#contact">Detalhes</a>
+                <button type="button" class="btn-open-gallery" data-open-gallery="go">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 05: Grow Business -->
+          <article class="project-card standard" data-cat="fullstack" data-proj="grow">
+            <div class="pc-visual" aria-hidden="true">
+              <img src="/assets/destaque_01_hero_home-CzdRicqm.png"
+                alt="Grow Business - Home" loading="lazy" />
+            </div>
+            <span class="pc-index">05</span>
+            <div class="pc-body">
+              <div class="pc-badges-row">
+                <span class="pc-type">Full-Stack · Inclusão Social</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> Galeria Top Picks</span>
+              </div>
+              <h3 class="pc-title">Grow Business — Empregabilidade &amp; Conexão</h3>
+              <p class="pc-desc">Plataforma de impacto social conectando pessoas em busca de oportunidades a
+                micro/pequenas empresas locais. Feed de vagas com busca dinâmica, painel corporativo B2B de triagem e
+                persistência híbrida (PostgreSQL + Demo Store em memória).</p>
+              <span class="pc-metric">Scrypt Hash · Queries Parametrizadas · Dual Portal</span>
+              <div class="pc-stack">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>PostgreSQL</span>
+                <span>JavaScript ES6+</span>
+                <span>Scrypt</span>
+                <span>Multer</span>
+              </div>
+              <div class="pc-links">
+                <button type="button" class="btn-open-gallery" data-open-gallery="grow">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 06: Eletroserv E-Commerce -->
+          <article class="project-card standard" data-cat="fullstack" data-proj="eletroserv">
+            <div class="pc-visual" aria-hidden="true">
+              <img src="/assets/01_home_hero_desktop-m2XrIul-.png" alt="Eletroserv - E-Commerce"
+                loading="lazy" />
+            </div>
+            <span class="pc-index">06</span>
+            <div class="pc-body">
+              <div class="pc-badges-row">
+                <span class="pc-type">Full-Stack · E-Commerce &amp; B2B</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 18 Telas</span>
+              </div>
+              <h3 class="pc-title">Eletroserv — E-Commerce &amp; Painel Administrativo</h3>
+              <p class="pc-desc">Loja virtual e sistema de gestão comercial com catálogo categorizado (novos e saldão de
+                usados), busca inteligente com autocomplete, drawer de carrinho dinâmico, modal de visualização rápida e
+                dashboard gerencial de vendas com KPIs.</p>
+              <span class="pc-metric">Zero Dependências · Catálogo Responsivo · Cart Drawer</span>
+              <div class="pc-stack">
+                <span>JavaScript ES6+</span>
+                <span>CSS3 Flex/Grid</span>
+                <span>HTML5 Semântico</span>
+                <span>Admin Analytics</span>
+              </div>
+              <div class="pc-links">
+                <button type="button" class="btn-open-gallery" data-open-gallery="eletroserv">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 07: OVERVOLTAGE 21 -->
+          <article class="project-card standard" data-cat="frontend" data-proj="21">
+            <div class="pc-visual" aria-hidden="true">
+              <img src="/assets/01_tela_inicial_cyberpunk-B8bFmI1X.png" alt="OVERVOLTAGE 21 - Início"
+                loading="lazy" />
+            </div>
+            <span class="pc-index">07</span>
+            <div class="pc-body">
+              <div class="pc-badges-row">
+                <span class="pc-type">Front-end · Game Dev &amp; Cyberpunk UI</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 11 Telas</span>
+              </div>
+              <h3 class="pc-title">OVERVOLTAGE 21 — Card Game Tático Cyberpunk</h3>
+              <p class="pc-desc">Jogo tático de sobrecarga numérica e combate de cartas inspirado em Balatro e RE7 21.
+                Desenvolvido 100% em Vanilla JS/CSS com HUD Cyberpunk dinâmico, sistema de trunfos táticos (Espy Vision,
+                Shift Target 27) e 5 chefes de IA com árvores de decisão adaptativas.</p>
+              <span class="pc-metric">100% Vanilla JS · CRT Shaders · 5 IAs Únicas</span>
+              <div class="pc-stack">
+                <span>JavaScript Vanilla</span>
+                <span>HTML5 Canvas</span>
+                <span>CSS Grid</span>
+                <span>CRT/VHS Shaders</span>
+                <span>Decision Tree AI</span>
+              </div>
+              <div class="pc-links">
+                <button type="button" class="btn-open-gallery" data-open-gallery="21">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projeto 08: QuizDOG -->
+          <article class="project-card standard" data-cat="frontend" data-proj="quizdog">
+            <div class="pc-visual" aria-hidden="true">
+              <img src="/assets/00_capa_showcase_mockup-Cxyw9IzB.png" alt="QuizDOG - Showcase"
+                loading="lazy" />
+            </div>
+            <span class="pc-index">08</span>
+            <div class="pc-body">
+              <div class="pc-badges-row">
+                <span class="pc-type">Front-end · Gamificação &amp; REST API</span>
+                <span class="pc-gallery-badge"><svg viewBox="0 0 24 24" width="12" height="12" fill="none"
+                    stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <path d="M21 15l-5-5L5 21" />
+                  </svg> 10 Telas</span>
+              </div>
+              <h3 class="pc-title">QuizDOG — Jogo Interativo das Raças Caninas</h3>
+              <p class="pc-desc">Aplicação web gamificada consumindo a Dog CEO REST API com 2 modos de jogo (múltipla
+                escolha e digitação livre), sintetizador de áudio procedural via Web Audio API, partículas de confete em
+                Canvas 2D nativo, modo streak em chamas e tradução para 70+ raças.</p>
+              <span class="pc-metric">Web Audio API · Canvas Particles · Zero-Scroll UX</span>
+              <div class="pc-stack">
+                <span>JavaScript ES6+</span>
+                <span>Dog CEO REST API</span>
+                <span>Web Audio API</span>
+                <span>HTML5 Canvas</span>
+                <span>LocalStorage</span>
+              </div>
+              <div class="pc-links">
+                <button type="button" class="btn-open-gallery" data-open-gallery="quizdog">Ver Galeria &amp; Telas
+                  📸</button>
+                <a href="https://github.com/Jotih109" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </article>
@@ -1066,6 +1222,57 @@
       </div>
     </footer>
 
+    <!-- Modal / Lightbox de Galeria de Projetos -->
+    <div id="projectGalleryModal" class="project-modal" aria-hidden="true" role="dialog" aria-modal="true"
+      aria-labelledby="pmTitle">
+      <div class="pm-backdrop" id="pmBackdrop"></div>
+      <div class="pm-container">
+        <div class="pm-header">
+          <div class="pm-meta">
+            <span class="pm-badge" id="pmBadge">PROJETO</span>
+            <h2 class="pm-title" id="pmTitle">Nome do Projeto</h2>
+          </div>
+          <button type="button" class="pm-close-btn" id="pmCloseBtn" aria-label="Fechar galeria">✕</button>
+        </div>
+
+        <div class="pm-viewer">
+          <button type="button" class="pm-nav-btn pm-prev-btn" id="pmPrevBtn" aria-label="Imagem anterior">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+          </button>
+
+          <div class="pm-slide-content">
+            <div class="pm-image-frame">
+              <img id="pmMainImage" src="" alt="Captura do projeto" />
+              <div class="pm-loading-spinner" id="pmSpinner"></div>
+            </div>
+            <div class="pm-caption" id="pmCaption">
+              <div class="pm-caption-header">
+                <span class="pm-caption-counter" id="pmCounter">1 / 8</span>
+                <h4 class="pm-caption-title" id="pmCaptionTitle">Título da Captura</h4>
+              </div>
+              <p class="pm-caption-desc" id="pmCaptionDesc">Descrição detalhada do recurso em exibição.</p>
+            </div>
+          </div>
+
+          <button type="button" class="pm-nav-btn pm-next-btn" id="pmNextBtn" aria-label="Próxima imagem">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="pm-footer">
+          <div class="pm-thumbs-wrapper">
+            <div class="pm-thumbnails" id="pmThumbnails" role="tablist">
+              <!-- Injetado dinamicamente via JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Toast Notification -->
     <div id="copyToast" class="copy-toast" role="status" aria-live="polite">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFB020" stroke-width="2.5"
@@ -1080,7 +1287,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
 
-  <!-- Lógica Principal em JavaScript Puro -->
+  <!-- Lógica Principal em JavaScript Puro -->
 </body>
 
 </html>

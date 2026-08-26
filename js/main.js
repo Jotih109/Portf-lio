@@ -257,6 +257,102 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
+    analise_doqt: {
+      title: "Doqt Analytics — Inteligência Clínica & Gestão",
+      badge: "Full-Stack · Healthtech & BI",
+      images: [
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/03_dashboard_overview_dark.png",
+          title: "Visão Geral Executiva (Dark Mode)",
+          desc: "Tema escuro elegante com contraste otimizado, glassmorphism, score geral de saúde da clínica, KPIs de ocupação, no-show, tempo de espera e radar multivariável."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/01_login_page.png",
+          title: "Página de Autenticação & Welcome",
+          desc: "Design moderno com login seguro via JWT e opção de acesso de demonstração em 1 clique (Modo Convidado)."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/02_dashboard_overview_light.png",
+          title: "Visão Geral Executiva (Light Mode)",
+          desc: "Score geral de saúde clínica, KPIs de produtividade, radar multivariável e motor de IA com recomendações e insights preditivos."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/04_metas_acompanhamento.png",
+          title: "Acompanhamento de Metas & Ritmo",
+          desc: "Projeções matemáticas de faturamento e consultas, ritmo diário necessário vs. realizado e barra de progresso dinâmica."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/05_metas_fechamento_mensal.png",
+          title: "Fechamento Mensal Consolidado",
+          desc: "Consolidação financeira e operacional por unidade (Campos Elísios, Centro, Irajá) e divisão de mix Particular vs. Convênios."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/06_metas_os_zeradas.png",
+          title: "Auditoria de O.S. Zeradas",
+          desc: "Identificação e prevenção de perdas de faturamento por ordens de serviço sem valor ou pendências cadastrais."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/07_desempenho_por_filial.png",
+          title: "Desempenho por Unidade / Filial",
+          desc: "Comparação direta entre filiais com faturamento, taxa de ocupação física e índice de cancelamentos."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/08_desempenho_por_profissional.png",
+          title: "Scorecards Médicos Individuais",
+          desc: "Score de produtividade individual (0-100), tempo médio de espera, taxa de retorno e tabela paginada com buscas instantâneas."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/09_desempenho_por_especialidade.png",
+          title: "Desempenho por Especialidade",
+          desc: "Análise de rentabilidade e volume por especialidade médica (Psiquiatria, Oftalmologia, Ortopedia, etc.)."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/10_desempenho_por_convenio.png",
+          title: "Desempenho por Convênio & Planos",
+          desc: "Participação de mercado de cada operadora (Unimed, Bradesco, Amil, SulAmérica) e prazos médios de recebimento."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/11_desempenho_por_recepcionista.png",
+          title: "Produtividade da Recepção",
+          desc: "Métricas de agilidade de atendimento, volume de agendamentos realizados e taxa de conversão por colaborador."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/12_tendencias_fluxo_pacientes.png",
+          title: "Fluxo de Pacientes & Funil",
+          desc: "Funil de conversão completo (Horários Abertos ➔ Agendados ➔ Atendidos) e Top 10 procedimentos mais frequentes."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/13_tendencias_analise_temporal.png",
+          title: "Mapa de Calor de Horários (Heatmap)",
+          desc: "Matriz visual de densidade de fluxo por dia da semana (Segunda a Sábado) e faixas horárias (07h às 22h)."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/14_tendencias_comparativo.png",
+          title: "Comparativo Avançado entre Períodos",
+          desc: "Ferramenta analítica para confrontar métricas de diferentes filiais, meses e sazonalidades."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/15_medicina_inativacoes_ina_ativ.png",
+          title: "Inteligência de Inativações (INA_ATIV)",
+          desc: "Painel de controle e detecção de ociosidade, agendas bloqueadas e motivos de inativação de horários médicos."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/16_gestao_importacao_dados.png",
+          title: "Central de Importação e ETL",
+          desc: "Upload inteligente de planilhas CSV/XLSX, validação de schema em tempo real e sincronização com a base local."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/17_filtros_e_interatividade.png",
+          title: "Filtros Globais & Interatividade",
+          desc: "Menu suspenso de seleção múltipla de filiais, períodos personalizados e atualização reativa de todo o dashboard."
+        },
+        {
+          src: "./imgs/Imgs%20projetos/analise%20doqt/18_mobile_responsive_dashboard.png",
+          title: "Experiência Mobile-First",
+          desc: "Interface totalmente responsiva otimizada para smartphones e tablets com navegação por gestos e cards táteis."
+        }
+      ]
+    },
     chat: {
       title: "Chat DOQT — Mensageria Hospitalar & Clínica",
       badge: "Full-Stack · Saúde & Realtime",
